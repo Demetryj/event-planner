@@ -1,6 +1,7 @@
 {
   "name": "event-planner",
   "version": "0.1.0",
+  "private": true,
   "homepage": "https://demetryj.github.io/event-planner/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
