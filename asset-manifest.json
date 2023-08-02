@@ -1,21 +1,25 @@
 {
   "files": {
     "main.css": "/event-planner/static/css/main.7cda0caf.css",
-    "main.js": "/event-planner/static/js/main.9920d8c3.js",
-    "static/js/415.800dc443.chunk.js": "/event-planner/static/js/415.800dc443.chunk.js",
+    "main.js": "/event-planner/static/js/main.527789fe.js",
+    "static/js/269.7cbc588f.chunk.js": "/event-planner/static/js/269.7cbc588f.chunk.js",
     "static/js/888.a81e0ae9.chunk.js": "/event-planner/static/js/888.a81e0ae9.chunk.js",
     "static/js/577.80460b85.chunk.js": "/event-planner/static/js/577.80460b85.chunk.js",
-    "static/js/553.fd9b0c7c.chunk.js": "/event-planner/static/js/553.fd9b0c7c.chunk.js",
+    "static/js/553.60cc3bed.chunk.js": "/event-planner/static/js/553.60cc3bed.chunk.js",
+    "static/media/Bg-main@2x.png": "/event-planner/static/media/Bg-main@2x.48bda04fee6bf57acaf4.png",
+    "static/media/Bg-main.png": "/event-planner/static/media/Bg-main.8a66fc79105471b16c3e.png",
+    "static/media/Art@2x.jpg": "/event-planner/static/media/Art@2x.3c10bfa09188738f6448.jpg",
+    "static/media/Art.jpg": "/event-planner/static/media/Art.8d1aff3751c0a3beff13.jpg",
     "index.html": "/event-planner/index.html",
     "main.7cda0caf.css.map": "/event-planner/static/css/main.7cda0caf.css.map",
-    "main.9920d8c3.js.map": "/event-planner/static/js/main.9920d8c3.js.map",
-    "415.800dc443.chunk.js.map": "/event-planner/static/js/415.800dc443.chunk.js.map",
+    "main.527789fe.js.map": "/event-planner/static/js/main.527789fe.js.map",
+    "269.7cbc588f.chunk.js.map": "/event-planner/static/js/269.7cbc588f.chunk.js.map",
     "888.a81e0ae9.chunk.js.map": "/event-planner/static/js/888.a81e0ae9.chunk.js.map",
     "577.80460b85.chunk.js.map": "/event-planner/static/js/577.80460b85.chunk.js.map",
-    "553.fd9b0c7c.chunk.js.map": "/event-planner/static/js/553.fd9b0c7c.chunk.js.map"
+    "553.60cc3bed.chunk.js.map": "/event-planner/static/js/553.60cc3bed.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7cda0caf.css",
-    "static/js/main.9920d8c3.js"
+    "static/js/main.527789fe.js"
   ]
 }
