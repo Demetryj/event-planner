@@ -27,22 +27,25 @@ export const theme = {
     accentText: '#7B61FF',
 
     //border
+    borderHeader: '#7B61FF',
     borderMenu: '#ACA7C3',
     borderInput: '#ACA7C3',
     borderInputAccent: '#7B61FF',
     borderInputFail: '#FF2B77',
 
     iconSearch: '#7B61FF',
+    iconLang: '#3F3F3F',
     iconInput: '#7B61FF',
     iconInputFail: '#FF2B77',
 
     backgroundWhite: '#FFFFFF',
+    backgroundHeader: '#FEFCFF',
 
     button: '#7B61FF',
     buttonAccent: '#6243FF',
   },
 
-  spacing: n => `${2 * n}px`,
+  spacing: n => `${4 * n}px`,
 
   media: {
     mobile: '(min-width: 320px)',
@@ -57,7 +60,14 @@ export const theme = {
   }
   */
 
+  breakpoints: {
+    xs: '320px',
+    md: '768px',
+    lg: '1280px',
+  },
+
   fontWeights: {
+    light: 300,
     regular: 400,
     medium: 500,
     semiBold: 600,
@@ -66,25 +76,21 @@ export const theme = {
   fontSizes: {
     s: '14px',
     m: '16px',
-    l: '32px',
+    l: '24px',
   },
 
   lineHeights: {
-    subheader: '1',
-    content: '1.33',
-    extraContent: '1.29',
-    btnText: '1.12',
-    description: '1.25',
-    time: '1.4',
-    headerLinks: '1.6',
-    userLink: '1.7',
-    searchSelect: '1.5',
+    normal: 'normal',
+    s: '1',
+    sm: '1.25',
+    m: '1.43',
+    l: '1.5',
   },
 
   borders: {
     none: 'none',
     normal: '1px solid',
-    medium: '2px solid',
+    //medium: '2px solid',
   },
 
   radii: {
