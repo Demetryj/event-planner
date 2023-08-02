@@ -64,6 +64,7 @@ export const Input = styled.input`
   padding-right: ${p => p.theme.spacing(12)};
   padding-left: ${p => p.theme.spacing(12)};
   width: calc(100% - ${p => p.theme.spacing(24)});
+  font-size: ${p => p.theme.fontSizes.s};
 
   line-height: ${p => p.theme.lineHeights.s};
 
