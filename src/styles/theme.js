@@ -85,6 +85,7 @@ export const theme = {
     sm: '1.25',
     m: '1.43',
     l: '1.5',
+    xl: '1.71',
   },
 
   borders: {
@@ -101,6 +102,7 @@ export const theme = {
 
   shadows: {
     main: '2px 4px 9px 0px rgba(166, 141, 174, 0.28)',
+    inCard: '0px 4px 4px 0px rgba(0, 0, 0, 0.25);',
   },
 
   transitions: {
