@@ -6,7 +6,9 @@ body {
   margin: 0;
   position: relative;
   font-family: 'Poppins', sans-serif;
+  font-weight: ${p => p.theme.fontWeights.regular};
   font-style: normal;
+  line-height:${p => p.theme.lineHeights.normal};
   box-sizing: border-box;
   }
 
@@ -17,7 +19,9 @@ code {
 
 ul {
   list-style: none;
+  margin: 0;
   padding-left: 0;
+
 }
 
 a {
