@@ -5,6 +5,7 @@ export const theme = {
     mainTitle: '#3F3F3F',
     title: '#1C1B1F',
     text: '#49454F',
+    filter: '#3F3F3F',
 
     bar: '#3F3F3F',
     menu: '#ACA7C3',
@@ -24,7 +25,7 @@ export const theme = {
     inputText: '#3F3F3F',
     disabledInput: '#ACA7C3', //
 
-    accentText: '#7B61FF',
+    // accentText: '#7B61FF',
 
     //border
     borderHeader: '#7B61FF',
@@ -32,9 +33,11 @@ export const theme = {
     borderInput: '#ACA7C3',
     borderInputAccent: '#7B61FF',
     borderInputFail: '#FF2B77',
+    borderPurple: '#7B61FF',
 
     iconSearch: '#7B61FF',
     iconLang: '#3F3F3F',
+    iconFilter: '#3F3F3F',
     iconInput: '#7B61FF',
     iconInputFail: '#FF2B77',
 
@@ -51,6 +54,7 @@ export const theme = {
     mobile: '(min-width: 320px)',
     medium: '(min-width: 768px)',
     large: '(min-width: 1280px)',
+    big: '(min-width: 1440px)',
   },
   /* usage
    @media screen and (${(p) => p.theme.media.large}) {
@@ -60,11 +64,11 @@ export const theme = {
   }
   */
 
-  breakpoints: {
-    xs: '320px',
-    md: '768px',
-    lg: '1280px',
-  },
+  // breakpoints: {
+  //   xs: '320px',
+  //   md: '768px',
+  //   lg: '1280px',
+  // },
 
   fontWeights: {
     light: 300,
@@ -74,15 +78,18 @@ export const theme = {
   },
 
   fontSizes: {
+    xs: '12px',
     s: '14px',
     m: '16px',
     l: '24px',
+    xl: '32px',
   },
 
   lineHeights: {
     normal: 'normal',
     s: '1',
     sm: '1.25',
+    ml: '1.33',
     m: '1.43',
     l: '1.5',
     xl: '1.71',
@@ -95,6 +102,7 @@ export const theme = {
   },
 
   radii: {
+    xs: '4px',
     s: '8px',
     m: '10px',
     l: '12px',
@@ -102,7 +110,7 @@ export const theme = {
 
   shadows: {
     main: '2px 4px 9px 0px rgba(166, 141, 174, 0.28)',
-    inCard: '0px 4px 4px 0px rgba(0, 0, 0, 0.25);',
+    menu: '0px 4px 10px 0px rgba(0, 0, 0, 0.25)',
   },
 
   transitions: {
