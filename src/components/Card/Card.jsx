@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import {
   WrapperCard,
@@ -13,34 +14,44 @@ import {
   Button,
 } from './Card.styled';
 
-export const Card = () => {
+export const Card = ({
+  item: {
+    id,
+    title,
+    description,
+    date,
+    time,
+    location: place,
+    category,
+    priority,
+    picture,
+  },
+}) => {
   const [isActive, setIsActive] = useState(false);
+  const location = useLocation();
 
   const handleClick = () => {
     setIsActive(!isActive);
   };
 
   return (
-    <WrapperCard onClick={handleClick} status={isActive}>
+    <WrapperCard onClick={handleClick} picture={picture}>
       <WrapperEvent>
-        <EventType>Art</EventType>
-        <Criterion>High</Criterion>
+        <EventType>{category}</EventType>
+        <Criterion variant={priority}>{priority}</Criterion>
       </WrapperEvent>
 
       <div>
         <DateAndPlace>
-          <Text>{`12.07 at 12:00`}</Text>
-          <Text>Kyiv</Text>
+          <Text>{`${date} at ${time}`}</Text>
+          <Text>{place}</Text>
         </DateAndPlace>
 
         <BoxAbout>
-          <EventName>Galery Opening</EventName>
-          <Description>
-            Discover an enchanting evening celebrating the world of art at our
-            exclusive gallery opening.
-          </Description>
+          <EventName>{title}</EventName>
+          <Description>{description}</Description>
 
-          <Link to="/event">
+          <Link to={`/event/${id}`} state={{ from: location }}>
             <Button type="button" status={isActive}>
               More info
             </Button>
