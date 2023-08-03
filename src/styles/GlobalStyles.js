@@ -17,7 +17,7 @@ code {
     monospace;
 }
 
-ul {
+ul{
   list-style: none;
   margin: 0;
   padding-left: 0;
