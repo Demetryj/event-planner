@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import bgMain from 'images/Bg-main.png';
-import bgMain2 from 'images/Bg-main@2x.png';
+import bgMain from 'images/bg-main.png';
+import bgMain2 from 'images/bg-main@2x.png';
 
 export const Section = styled.section`
   min-height: calc(100vh - 165px);
@@ -41,5 +41,9 @@ export const Container = styled.div`
     padding-right: ${p => p.theme.spacing(20)};
     padding-bottom: ${p => p.theme.spacing(19.25)};
     width: ${p => p.theme.spacing(320)};
+  }
+
+  @media screen and (${p => p.theme.media.big}) {
+    width: ${p => p.theme.spacing(360)};
   }
 `;
