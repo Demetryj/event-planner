@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import card1 from 'images/Art.jpg';
-import card2 from 'images/Art@2x.jpg';
 
 export const WrapperCard = styled.div`
   display: flex;
@@ -9,14 +7,8 @@ export const WrapperCard = styled.div`
 
   height: 480px;
 
-  background-image: url(${card1});
+  background-image: url(${p => p.picture});
 
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(${card2});
-  }
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -28,13 +20,13 @@ export const WrapperCard = styled.div`
 
   cursor: pointer;
 
-  & button {
-    display: ${p => (p.status ? 'block' : 'none')};
-  }
-
   &:hover button,
   &:focus button {
     display: block;
+  }
+
+  & button {
+    display: ${p => (p.status ? 'block' : 'none')};
   }
 `;
 
@@ -62,6 +54,16 @@ export const Criterion = styled.span`
   display: block;
   padding: ${p => p.theme.spacing(1.5)} ${p => p.theme.spacing(3)};
 
+  color: ${p => {
+    if (p.variant === 'High') {
+      return p.theme.colors.categoryHight;
+    } else if (p.variant === 'Medium') {
+      return p.theme.colors.categoryMedium;
+    } else {
+      return p.theme.colors.categoryLow;
+    }
+  }};
+
   border-radius: ${p => p.theme.radii.s};
   background-color: ${p => p.theme.colors.backgroundWhite};
 `;
@@ -75,7 +77,7 @@ export const DateAndPlace = styled.div`
   opacity: 80%;
 `;
 
-export const Text = styled.p`
+export const Text = styled.span`
   font-size: ${p => p.theme.fontSizes.s};
   line-height: ${p => p.theme.lineHeights.xl};
 
