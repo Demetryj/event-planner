@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import bgMain from 'images/bg-main.png';
-import bgMain2 from 'images/bg-main@2x.png';
+import bgMain from 'images/bg-mainM.png';
+import bgMain2 from 'images/bg-mainM@2x.png';
 
 export const Section = styled.section`
   min-height: calc(100vh - 165px);
