@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/577.80460b85.chunk.js","mappings":"sIAIA,UAJc,WACZ,OAAOA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,SACd,C","sources":["pages/Event.jsx"],"sourcesContent":["const Event = () => {\n  return <div>Event</div>;\n};\n\nexport default Event;\n"],"names":["_jsx","children"],"sourceRoot":""}

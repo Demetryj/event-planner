@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/888.e3ae21e3.chunk.js","mappings":"uIAIA,UAJoB,WAClB,OAAOA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,eACd,C","sources":["pages/CreateEvent.jsx"],"sourcesContent":["const CreateEvent = () => {\n  return <div>CreateEvent</div>;\n};\n\nexport default CreateEvent;\n"],"names":["_jsx","children"],"sourceRoot":""}
