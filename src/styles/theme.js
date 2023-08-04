@@ -18,7 +18,7 @@ export const theme = {
     categoryLow: '#6BD475',
 
     //input
-    inputTitle: '#3F3F3F',
+    inputTitle: '#3F3F3F', //
     //inputTitleActive: '#7B61FF',
     inputPlaceholderSearch: '#888888', //
     inputPlaceholder: '#ACA7C3',
@@ -39,6 +39,7 @@ export const theme = {
     iconLang: '#3F3F3F',
     iconFilter: '#3F3F3F',
     iconInput: '#7B61FF',
+    iconDisabled: '#ACA7C3',
     iconInputFail: '#FF2B77',
 
     backgroundWhite: '#FFFFFF',
@@ -46,6 +47,7 @@ export const theme = {
 
     button: '#7B61FF',
     buttonAccent: '#6243FF',
+    buttonDisabled: '#ACA7C3',
   },
 
   spacing: n => `${4 * n}px`,
