@@ -1,4 +1,4 @@
-import art from 'images/art@2x.jpg';
+import art from 'images/art.jpg';
 import conference from 'images/conference@2x.jpg';
 import workshop1 from 'images/workshop-1@2x.jpg';
 import party from 'images/party@2x.jpg';
