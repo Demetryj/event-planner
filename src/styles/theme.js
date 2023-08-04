@@ -64,11 +64,11 @@ export const theme = {
   }
   */
 
-  // breakpoints: {
-  //   xs: '320px',
-  //   md: '768px',
-  //   lg: '1280px',
-  // },
+  breakpoints: {
+    xs: '320px',
+    md: '768px',
+    lg: '1280px',
+  },
 
   fontWeights: {
     light: 300,
