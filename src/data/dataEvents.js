@@ -1,11 +1,11 @@
 import art from 'images/artArt@2x.jpg';
-import conference from 'images/conference@2x.jpg';
-import workshop1 from 'images/workshop-1@2x.jpg';
-import party from 'images/party@2x.jpg';
-import business from 'images/business@2x.jpg';
-import workshop from 'images/workshop@2x.jpg';
-import music from 'images/music@2x.jpg';
-import sport from 'images/sport@2x.jpg';
+import conference from 'images/conferenceC@2x.jpg';
+import workshop1 from 'images/workshop-1W@2x.jpg';
+import party from 'images/partyP@2x.jpg';
+import business from 'images/businessS@2x.jpg';
+import workshop from 'images/workshopW@2x.jpg';
+import music from 'images/musicM@2x.jpg';
+import sport from 'images/sportS@2x.jpg';
 
 export const events = [
   {
