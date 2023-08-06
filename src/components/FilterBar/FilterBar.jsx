@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { HiOutlinePlus } from 'react-icons/hi';
 import { CiFilter } from 'react-icons/ci';
 import { LiaSlidersHSolid } from 'react-icons/lia';
@@ -13,6 +13,7 @@ export const FilterBar = () => {
   const [isOpenSort, setIsOpenSort] = useState(false);
   const [isOpenCategory, setIsOpenCategory] = useState(false);
   const { isMobile } = useMedia();
+  const location = useLocation();
 
   const handleClickSort = () => setIsOpenSort(!isOpenSort);
   const handleClickCategory = () => setIsOpenCategory(!isOpenCategory);
@@ -44,7 +45,7 @@ export const FilterBar = () => {
         </FilterMenu>
       )}
 
-      <Link to="/create-event">
+      <Link to="/create-event" state={{ from: location }}>
         <BtnAdd type="button">
           <HiOutlinePlus size={24} color="white" />
           <TextBtn>Add new event</TextBtn>
