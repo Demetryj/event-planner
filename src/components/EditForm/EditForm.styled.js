@@ -45,18 +45,24 @@ export const FormWrap = styled(Form)`
 //   color: ${p => p.theme.colors.disabledInput};
 // `;
 
+// export const WrapperInput = styled.div`
+//   position: relative;
+//   margin-bottom: ${p => p.theme.spacing(5)};
+// `;
+
 // export const Label = styled.label`
 //   position: relative;
 // `;
 
-// export const Input = styled(Field)`
-//   margin-bottom: ${p => p.theme.spacing(5)};
+// export const Input = styled.input`
 //   padding-top: ${p => p.theme.spacing(4)};
 //   padding-bottom: ${p => p.theme.spacing(4)};
 //   padding-left: ${p => p.theme.spacing(3)};
 //   padding-right: ${p => p.theme.spacing(9)};
 
-//   width: calc(100% - 50px);
+//   width: ${p => (p.as === 'textarea' ? '100%' : 'calc(100% - 50px)')};
+//   height: ${p => p.as === 'textarea' && p.theme.spacing(39)};
+//   resize: ${p => p.as === 'textarea' && 'none'};
 
 //   font-family: inherit;
 //   font-size: ${p => p.theme.fontSizes.m};
@@ -67,7 +73,17 @@ export const FormWrap = styled(Form)`
 
 //   border: ${p => p.theme.borders.normal};
 //   border-radius: ${p => p.theme.radii.s};
-//   border-color: ${p => p.theme.colors.borderInput};
+//   border-color: ${p => {
+//     if (p.err) {
+//       return p.theme.colors.borderInputFail;
+//     } else {
+//       return p.theme.colors.borderPurple;
+//     }
+//   }};
+
+//   &:placeholder-shown {
+//     border-color: ${p => !p.err && p.theme.colors.borderInput};
+//   }
 
 //   &::placeholder {
 //     font-family: inherit;
@@ -80,7 +96,7 @@ export const FormWrap = styled(Form)`
 //   }
 // `;
 
-// export const Textarea = styled(Field)`
+// export const Textarea = styled.textarea`
 //   margin-bottom: ${p => p.theme.spacing(5)};
 //   padding-top: ${p => p.theme.spacing(4)};
 //   padding-bottom: ${p => p.theme.spacing(4)};
@@ -124,8 +140,15 @@ export const FormWrap = styled(Form)`
 //     ${p => p.theme.spacing(4.25)}
 //   );
 
-//   color: ${p =>
-//     p.disabled ? p.theme.colors.iconDisabled : p.theme.colors.iconInput};
+//   color: ${p => {
+//     if (p.disabled) {
+//       return p.theme.colors.iconDisabled;
+//     } else if (p.err) {
+//       return p.theme.colors.iconInputFail;
+//     } else {
+//       return p.theme.colors.iconInput;
+//     }
+//   }};
 
 //   &:hover,
 //   &:focus {

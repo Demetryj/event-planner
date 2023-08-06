@@ -90,6 +90,8 @@ export const BoxAbout = styled.div`
   gap: ${p => p.theme.spacing(4)};
   padding: ${p => p.theme.spacing(4)};
 
+  min-height: ${p => p.theme.spacing(37)};
+
   background-color: ${p => p.theme.colors.backgroundWhite};
 `;
 
@@ -107,7 +109,6 @@ export const Description = styled.p`
 `;
 
 export const Button = styled.button`
-  display: none;
   margin-left: auto;
   padding: ${p => p.theme.spacing(2.5)} ${p => p.theme.spacing(6)};
 
