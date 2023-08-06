@@ -1,6 +1,3 @@
-// import { BsArrowUpShort } from 'react-icons/bs';
-// import { BsArrowDownShort } from 'react-icons/bs';
-
 export const category = [
   'Art',
   'Music',
@@ -12,3 +9,5 @@ export const category = [
 ];
 
 export const sortBy = ['by name', 'by data', 'by priority'];
+
+export const priority = ['High', 'Medium', 'Low'];
