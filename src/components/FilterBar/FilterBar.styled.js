@@ -12,6 +12,10 @@ export const WrapperBar = styled.div`
   @media screen and (${p => p.theme.media.medium}) {
     gap: ${p => (p.isOpenSort ? p.theme.spacing(55) : p.theme.spacing(6))};
   }
+
+  @media screen and (${p => p.theme.media.large}) {
+    margin-bottom: ${p => p.theme.spacing(0)};
+  }
 `;
 
 export const Text = styled.p`

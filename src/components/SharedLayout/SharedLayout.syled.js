@@ -25,7 +25,10 @@ export const Section = styled.section`
 export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
-  padding: ${p => p.theme.spacing(10)} ${p => p.theme.spacing(6)};
+  padding-top: ${p => p.theme.spacing(10)};
+  padding-bottom: ${p => p.theme.spacing(34)};
+  padding-left: ${p => p.theme.spacing(6)};
+  padding-right: ${p => p.theme.spacing(6)};
   width: ${p => p.theme.spacing(80)};
 
   @media screen and (${p => p.theme.media.medium}) {

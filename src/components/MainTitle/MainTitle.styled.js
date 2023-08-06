@@ -13,6 +13,7 @@ export const Title = styled.h2`
   }
 
   @media screen and (${p => p.theme.media.large}) {
-    margin-bottom: ${p => p.theme.spacing(2.4)};
+    margin-bottom: ${p =>
+      p.display !== 'desktop' ? p.theme.spacing(2.4) : p.theme.spacing(0)};
   }
 `;
