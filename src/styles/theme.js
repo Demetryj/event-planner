@@ -12,6 +12,7 @@ export const theme = {
 
     whiteText: '#FFFFFF',
     purpleText: '#7B61FF',
+    errorText: '#FF2B77',
 
     categoryHight: '#FF2B77',
     categoryMedium: '#E2A300',
@@ -31,7 +32,7 @@ export const theme = {
     borderHeader: '#7B61FF',
     borderMenu: '#ACA7C3',
     borderInput: '#ACA7C3',
-    borderInputAccent: '#7B61FF',
+    borderInputAccent: '#7B61FF', //
     borderInputFail: '#FF2B77',
     borderPurple: '#7B61FF',
 
