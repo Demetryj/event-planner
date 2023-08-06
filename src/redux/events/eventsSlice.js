@@ -6,6 +6,7 @@ export const EventsSlice = createSlice({
   initialState: [...events],
   reducers: {
     addEvent(state, action) {
+      state.push(action.payload);
       return;
     },
     deleteEvent(state, action) {
