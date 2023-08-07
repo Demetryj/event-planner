@@ -1,14 +1,14 @@
 import { useSelector } from 'react-redux';
-import { selectEvents } from 'redux/events/selectors';
+import { selectVisibleEvents } from 'redux/filter/selectors';
 import { Card } from 'components/Card';
 import { List } from './CardList.styled';
 
 export const CardList = () => {
-  const events = useSelector(selectEvents);
+  const visibleEvents = useSelector(selectVisibleEvents);
 
   return (
     <List>
-      {events.map(oneEvent => (
+      {visibleEvents.map(oneEvent => (
         <li key={oneEvent.id}>
           <Card item={oneEvent} />
         </li>
