@@ -8,6 +8,6 @@ export const category = [
   'Sport',
 ];
 
-export const sortBy = ['by name', 'by data', 'by priority'];
+export const sortBy = ['by name', 'by date', 'by priority'];
 
 export const priority = ['High', 'Medium', 'Low'];
