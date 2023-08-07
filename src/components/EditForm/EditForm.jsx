@@ -59,7 +59,6 @@ export const EditForm = () => {
   }, []);
 
   const handleSubmit = (values, actions) => {
-    console.log(values);
     const newEvent = { ...values, picture: imgDefault, id: nanoid() };
     dispatch(addEvent(newEvent));
     clearCastomInputs(['category', 'priority'], values);
