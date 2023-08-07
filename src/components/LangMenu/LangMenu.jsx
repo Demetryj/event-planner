@@ -1,6 +1,8 @@
 import { LangList, LangItem, Text } from './LangMenu.styled';
 
-export const LangMenu = ({ languages }) => {
+const languages = ['UK', 'EN'];
+
+export const LangMenu = () => {
   return (
     <LangList>
       {languages.map(language => (
