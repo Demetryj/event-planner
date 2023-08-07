@@ -18,18 +18,18 @@ export const WrapperBar = styled.div`
   }
 `;
 
-export const Text = styled.p`
-  display: none;
+// export const Text = styled.p`
+//   display: none;
 
-  font-size: ${p => p.theme.fontSizes.m};
-  font-weight: ${p => p.theme.fontWeights.m};
+//   font-size: ${p => p.theme.fontSizes.m};
+//   font-weight: ${p => p.theme.fontWeights.m};
 
-  color: ${p => p.theme.colors.filter};
+//   color: ${p => p.theme.colors.filter};
 
-  @media screen and (${p => p.theme.media.medium}) {
-    display: block;
-  }
-`;
+//   @media screen and (${p => p.theme.media.medium}) {
+//     display: block;
+//   }
+// `;
 
 export const BtnAdd = styled.button`
   display: flex;

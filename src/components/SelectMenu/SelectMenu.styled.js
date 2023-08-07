@@ -22,16 +22,16 @@ export const MenuItem = styled.li`
     border-color: ${p => p.theme.colors.borderMenu};
   }
 
+  color: ${p => p.theme.colors.bar};
+
   cursor: pointer;
 
-  & p {
-    color: ${p => p.theme.colors.bar};
-    transition: ${p => p.theme.transitions.main};
-  }
+  transition: ${p => p.theme.transitions.main};
 
-  &:hover p,
-  &:focus p {
+  &:hover,
+  &:focus {
     color: ${p => p.theme.colors.purpleText};
+    border-color: ${p => p.theme.colors.borderPurple};
   }
 `;
 

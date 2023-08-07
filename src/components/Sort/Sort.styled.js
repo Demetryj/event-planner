@@ -22,6 +22,17 @@ export const Wrapper = styled.div`
   }
 
   & p {
+    display: none;
+
+    font-size: ${p => p.theme.fontSizes.m};
+    font-weight: ${p => p.theme.fontWeights.medium};
+
+    color: ${p => p.theme.colors.filter};
+
+    @media screen and (${p => p.theme.media.medium}) {
+      display: block;
+    }
+
     transition: ${p => p.theme.transitions.main};
   }
 

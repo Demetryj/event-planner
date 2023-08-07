@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const WrapperMenu = styled.div`
   position: absolute;
   right: ${p =>
-    p.variant === 'sortBy' ? p.theme.spacing(20) : p.theme.spacing(14.5)};
+    p.variant === 'sortBy' ? p.theme.spacing(20) : p.theme.spacing(15)};
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -40,10 +40,15 @@ export const WrapperHead = styled.div`
 
   color: ${p => p.theme.colors.purpleText};
 
+  border-bottom: ${p => p.theme.borders.normal};
+  border-color: ${p => p.theme.colors.borderMenu};
+
   & svg {
     width: ${p => p.theme.spacing(6)};
     height: ${p => p.theme.spacing(6)};
   }
+
+  cursor: pointer;
 `;
 
 export const FilterList = styled.ul`
@@ -62,21 +67,30 @@ export const FilterItem = styled.li`
   padding-right: ${p =>
     p.variant === 'sortBy' ? p.theme.spacing(6) : p.theme.spacing(4)};
 
-  border-top: ${p => p.theme.borders.normal};
-  border-color: ${p => p.theme.colors.borderMenu};
+  &:not(:last-child) {
+    border-bottom: ${p => p.theme.borders.normal};
+    border-color: ${p => p.theme.colors.borderMenu};
+  }
+
+  color: ${p => p.theme.colors.menu};
 
   cursor: pointer;
 
+  transition: ${p => p.theme.transitions.main};
+
   & svg {
-    color: ${p => p.theme.colors.menu};
     width: ${p => p.theme.spacing(6)};
     height: ${p => p.theme.spacing(6)};
+  }
+
+  &:hover,
+  &:focus {
+    color: ${p => p.theme.colors.purpleText};
+    border-color: ${p => p.theme.colors.borderPurple};
   }
 `;
 
 export const FilterName = styled.p`
   font-size: ${p => p.theme.fontSizes.s};
   line-height: ${p => p.theme.lineHeights.s};
-
-  color: ${p => p.theme.colors.menu};
 `;
