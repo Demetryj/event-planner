@@ -4,8 +4,9 @@ import { GoArrowLeft } from 'react-icons/go';
 
 export const ArrowBack = () => {
   const location = useLocation();
+
   return (
-    <Wrapper to={location.state.from}>
+    <Wrapper to={location.state?.from ?? '/'}>
       <GoArrowLeft />
       <Text>Back</Text>
     </Wrapper>
