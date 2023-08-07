@@ -6,6 +6,7 @@ export const LangList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: ${p => p.theme.spacing(2)};
+  z-index: 10;
 
   padding: ${p => p.theme.spacing(4)} ${p => p.theme.spacing(2)};
 
