@@ -1,4 +1,4 @@
-import { MenuList, MenuItem } from './SelectMenu.styled';
+import { MenuList, MenuItem, Text } from './SelectMenu.styled';
 
 export const SelectMenu = ({ array, closeMenu, values, name }) => {
   const handleClick = e => {
@@ -9,7 +9,7 @@ export const SelectMenu = ({ array, closeMenu, values, name }) => {
     <MenuList>
       {array.map(item => (
         <MenuItem key={item} onClick={handleClick}>
-          <p>{item}</p>
+          <Text>{item}</Text>
         </MenuItem>
       ))}
     </MenuList>
