@@ -1,7 +1,12 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { selectSearch } from 'redux/filter/selectors';
-import { changeFilter } from 'redux/filter/filterSlice';
+import {
+  changeFilter,
+  chooseCategory,
+  sortByValue,
+} from 'redux/filter/filterSlice';
 import { LangBar } from 'components/LangBar';
+
 import {
   Header,
   Container,
@@ -18,11 +23,17 @@ export const AppBar = () => {
 
   const handleCahgeInput = e => dispatch(changeFilter(e.target.value));
   const clearInput = () => dispatch(changeFilter(''));
+  const resetFilter = () => {
+    dispatch(chooseCategory(''));
+    dispatch(sortByValue(''));
+  };
 
   return (
     <Header>
       <Container>
-        <Logo to="/"> Event Planner</Logo>
+        <Logo to="/" onClick={resetFilter}>
+          Event Planner
+        </Logo>
         <Lable>
           <SearchIcon />
           <Input
