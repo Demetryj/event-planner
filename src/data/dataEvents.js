@@ -13,7 +13,7 @@ export const events = [
     title: 'Galery Opening',
     description:
       'Discover an enchanting evening celebrating the world of art at our exclusive gallery opening.',
-    date: '12.07',
+    date: '12.08',
     time: '12:00',
     location: 'Kyiv',
     category: 'Art',
@@ -25,7 +25,7 @@ export const events = [
     title: 'Innovation Summit',
     description:
       'Engage in a thought-provoking journey of knowledge and collaboration at our Innovation Summit.',
-    date: '12.07',
+    date: '12.09',
     time: '12:00',
     location: 'Kyiv',
     category: 'Conference',
@@ -85,7 +85,7 @@ export const events = [
     title: 'Acoustic Garden Concert',
     description:
       'Experience the magic of live music amidst the serene beauty of nature at our Acoustic Garden Concert.',
-    date: '12.07',
+    date: '13.07',
     time: '12:00',
     location: 'Kyiv',
     category: 'Music',
@@ -97,7 +97,7 @@ export const events = [
     title: 'Extreme Adventure Race',
     description:
       'Calling all thrill-seekers! Embark on an adrenaline-pumping journey at our Extreme Adventure Race.',
-    date: '12.07',
+    date: '18.07',
     time: '12:00',
     location: 'Kyiv',
     category: 'Sport',
