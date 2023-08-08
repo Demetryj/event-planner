@@ -3,6 +3,7 @@ import { SelectMenu } from 'components/SelectMenu';
 import { getValueForSelectInput } from 'utils/getValueForSelectInput';
 import { category, priority } from 'data/menuFilter';
 import { useClickOutside } from 'hooks/useClickOutside';
+import imgDefault from 'images/default-H@2x.jpg';
 import {
   WrapperInput,
   Label,

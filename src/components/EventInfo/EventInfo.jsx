@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { selectEvents } from 'redux/events/selectors';
 import { deleteEvent } from 'redux/events/eventsSlice';
 import { getEventById } from 'utils/getEventById';
+import imgDefault from 'images/default-W@2x.jpg';
 import {
   Wrapper,
   WrapperImg,
@@ -19,7 +20,6 @@ import {
 export const EventInfo = ({ location }) => {
   const { id } = useParams();
   const events = useSelector(selectEvents);
-  // const location = useLocation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -34,6 +34,8 @@ export const EventInfo = ({ location }) => {
     picture,
   } = data;
 
+  const isDefaultImg = picture.includes('default');
+
   const handleDeleteEvent = () => {
     dispatch(deleteEvent(id));
     navigate('/', { replace: true });
@@ -41,7 +43,7 @@ export const EventInfo = ({ location }) => {
 
   return (
     <Wrapper>
-      <WrapperImg picture={picture}></WrapperImg>
+      <WrapperImg picture={isDefaultImg ? imgDefault : picture}></WrapperImg>
       <WrapperInfo>
         <Description>{description}</Description>
 

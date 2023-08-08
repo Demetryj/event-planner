@@ -93,6 +93,10 @@ export const BoxAbout = styled.div`
   min-height: ${p => p.theme.spacing(37)};
 
   background-color: ${p => p.theme.colors.backgroundWhite};
+
+  @media screen and (${p => p.theme.media.big}) {
+    min-height: ${p => p.theme.spacing(42)};
+  }
 `;
 
 export const EventName = styled.p`
