@@ -12,9 +12,9 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="/create-event" element={<CreatePage />} />
         <Route path="/event/:id" element={<EventPage />} />
-        <Route path="/edit-event" element={<EditPage />} />
+        <Route path="/edit-event/:id" element={<EditPage />} />
+        <Route path="/create-event" element={<CreatePage />} />
       </Route>
     </Routes>
   );
