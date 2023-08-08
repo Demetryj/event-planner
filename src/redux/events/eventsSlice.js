@@ -9,6 +9,13 @@ export const EventsSlice = createSlice({
       state.push(action.payload);
     },
 
+    updateEvent(state, action) {
+      const index = state.findIndex(
+        oneEvent => oneEvent.id === action.payload.id
+      );
+      state.splice(index, 1, action.payload);
+    },
+
     deleteEvent(state, action) {
       const index = state.findIndex(oneEvent => oneEvent.id === action.payload);
       state.splice(index, 1);
@@ -16,5 +23,5 @@ export const EventsSlice = createSlice({
   },
 });
 
-export const { addEvent, deleteEvent } = EventsSlice.actions;
+export const { addEvent, updateEvent, deleteEvent } = EventsSlice.actions;
 export const eventsReducer = EventsSlice.reducer;
