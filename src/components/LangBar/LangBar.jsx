@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { useRef } from 'react';
 import { LangMenu } from 'components/LangMenu';
+import { useClickOutside } from 'hooks/useClickOutside';
 import {
   WrapperBar,
   WrapperLang,
@@ -11,18 +13,20 @@ import {
 export const LangBar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
+  const menuRef = useRef(null);
+
+  useClickOutside(menuRef, () => {
+    setIsOpenMenu(false);
+  });
+
   const handleOpenLangBar = () => setIsOpenMenu(!isOpenMenu);
 
   return (
-    <WrapperBar>
+    <WrapperBar onClick={handleOpenLangBar} ref={menuRef}>
       <WrapperLang>
         <Lang>UK</Lang>
 
-        {!isOpenMenu ? (
-          <ArrowDown onClick={handleOpenLangBar} />
-        ) : (
-          <ArrowUp onClick={handleOpenLangBar} />
-        )}
+        {!isOpenMenu ? <ArrowDown /> : <ArrowUp />}
       </WrapperLang>
       {isOpenMenu && <LangMenu />}
     </WrapperBar>

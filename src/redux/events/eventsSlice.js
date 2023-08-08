@@ -7,8 +7,8 @@ export const EventsSlice = createSlice({
   reducers: {
     addEvent(state, action) {
       state.push(action.payload);
-      return;
     },
+
     deleteEvent(state, action) {
       const index = state.findIndex(oneEvent => oneEvent.id === action.payload);
       state.splice(index, 1);
