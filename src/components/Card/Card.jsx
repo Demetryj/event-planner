@@ -51,7 +51,7 @@ export const Card = ({
           <EventName>{title}</EventName>
           <Description>{description}</Description>
 
-          <Link to={`/event/${id}`} state={{ from: location }}>
+          <Link to={`event/${id}`} state={{ from: location }}>
             <Button type="button" status={isActive}>
               More info
             </Button>
