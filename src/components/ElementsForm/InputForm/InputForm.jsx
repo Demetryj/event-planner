@@ -9,6 +9,7 @@ import {
 
 export const InputForm = props => {
   const { title, name, values, errors } = props;
+
   return (
     <WrapperInput>
       <Label htmlFor={name}>
