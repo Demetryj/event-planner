@@ -1,3 +1,5 @@
+import moment from 'moment/moment';
+
 export const sortEventsByValue = (events, sortValue) => {
   switch (sortValue) {
     case 'by name up':
@@ -7,17 +9,28 @@ export const sortEventsByValue = (events, sortValue) => {
       return [...events].sort((a, b) => b.title.localeCompare(a.title));
 
     case 'by date up':
-      return [...events].sort((a, b) => a.date.localeCompare(b.date));
+      return [...events].sort(
+        (a, b) => moment(a.date, 'DD.MM') - moment(b.date, 'DD.MM')
+      );
 
     case 'by date down':
-      return [...events].sort((a, b) => b.date.localeCompare(a.date));
+      return [...events].sort(
+        (a, b) => moment(b.date, 'DD.MM') - moment(a.date, 'DD.MM')
+      );
 
     case 'by priority up':
-      return [...events].sort((a, b) => a.priority.localeCompare(b.priority));
+      const priorityOrderUp = { Low: 1, Medium: 2, High: 3 };
+
+      return [...events].sort(
+        (a, b) => priorityOrderUp[a.priority] - priorityOrderUp[b.priority]
+      );
 
     case 'by priority down':
-      return [...events].sort((a, b) => b.priority.localeCompare(a.priority));
+      const priorityOrderDown = { Low: 1, Medium: 2, High: 3 };
 
+      return [...events].sort(
+        (a, b) => priorityOrderDown[b.priority] - priorityOrderDown[a.priority]
+      );
     default:
       break;
   }
