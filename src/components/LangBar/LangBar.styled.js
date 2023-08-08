@@ -17,6 +17,8 @@ export const WrapperLang = styled.div`
   padding-left: ${p => p.theme.spacing(3)};
   padding-right: ${p => p.theme.spacing(1)};
 
+  min-width: ${p => p.theme.spacing(16.25)};
+
   border-radius: ${p => p.theme.radii.s};
   box-shadow: ${p => p.theme.shadows.main};
 
