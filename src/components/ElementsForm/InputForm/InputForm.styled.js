@@ -84,6 +84,6 @@ export const RemoveIcon = styled(IoMdClose)`
 
   &:hover,
   &:focus {
-    cursor: pointer;
+    cursor: ${p => (p.disabled ? 'arrow' : 'pointer')};
   }
 `;

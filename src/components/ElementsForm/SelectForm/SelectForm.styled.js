@@ -6,6 +6,7 @@ import { MdOutlineKeyboardArrowUp } from 'react-icons/md';
 export const WrapperInput = styled.div`
   position: relative;
   margin-bottom: ${p => p.theme.spacing(5)};
+  cursor: pointer;
 `;
 
 export const Title = styled.p`
@@ -45,6 +46,8 @@ export const Input = styled(Field)`
   border-radius: ${p => p.theme.radii.s};
   border-color: ${p => p.theme.colors.borderPurple};
 
+  cursor: ${p => (p.name === 'picture' ? 'arrow' : 'pointer')};
+
   &:placeholder-shown {
     border-color: ${p => !p.err && p.theme.colors.borderInput};
   }
@@ -79,7 +82,7 @@ export const ArrowDown = styled(MdOutlineKeyboardArrowDown)`
     ${p => p.theme.spacing(4.25)}
   );
 
-  cursor: pointer;
+  cursor: ${p => (p.name === 'picture' ? 'arrow' : 'pointer')};
 `;
 
 export const ArrowUp = styled(MdOutlineKeyboardArrowUp)`
