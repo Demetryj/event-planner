@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Formik } from 'formik';
 import { Box } from 'components/Box';
 import { InputForm } from 'components/ElementsForm/InputForm';
@@ -16,8 +16,12 @@ export const EditForm = ({
   onButtonClick,
 }) => {
   const { isDesktop } = useMedia();
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
+    if (isFirstRender) {
+      return;
+    }
     clearInputs();
   }, []);
 
