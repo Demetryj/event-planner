@@ -18,15 +18,12 @@ export const theme = {
     categoryMedium: '#E2A300',
     categoryLow: '#6BD475',
 
-    //input
     inputTitle: '#3F3F3F', //
-    //inputTitleActive: '#7B61FF',
+
     inputPlaceholderSearch: '#888888', //
     inputPlaceholder: '#ACA7C3',
     inputText: '#3F3F3F',
     disabledInput: '#ACA7C3', //
-
-    // accentText: '#7B61FF',
 
     //border
     borderHeader: '#7B61FF',
@@ -36,6 +33,7 @@ export const theme = {
     borderInputFail: '#FF2B77',
     borderPurple: '#7B61FF',
 
+    //icons
     iconSearch: '#7B61FF',
     iconLang: '#3F3F3F',
     iconFilter: '#3F3F3F',
@@ -43,9 +41,11 @@ export const theme = {
     iconDisabled: '#ACA7C3',
     iconInputFail: '#FF2B77',
 
+    //background-color
     backgroundWhite: '#FFFFFF',
     backgroundHeader: '#FEFCFF',
 
+    //button
     button: '#7B61FF',
     buttonAccent: '#6243FF',
     buttonDisabled: '#ACA7C3',
@@ -57,7 +57,6 @@ export const theme = {
     mobile: '(min-width: 320px)',
     medium: '(min-width: 768px)',
     large: '(min-width: 1280px)',
-    big: '(min-width: 1440px)',
   },
   /* usage
    @media screen and (${(p) => p.theme.media.large}) {
@@ -101,7 +100,6 @@ export const theme = {
   borders: {
     none: 'none',
     normal: '1px solid',
-    //medium: '2px solid',
   },
 
   radii: {

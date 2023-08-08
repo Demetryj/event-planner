@@ -45,8 +45,4 @@ export const Wrapper = styled.div`
   &:focus p {
     color: ${p => p.theme.colors.purpleText};
   }
-
-  @media screen and (${p => p.theme.media.medium}) {
-    /* display: block; */
-  }
 `;

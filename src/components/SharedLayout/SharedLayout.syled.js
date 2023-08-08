@@ -46,8 +46,4 @@ export const Container = styled.div`
     padding-bottom: ${p => p.theme.spacing(19.25)};
     width: ${p => p.theme.spacing(320)};
   }
-
-  @media screen and (${p => p.theme.media.big}) {
-    width: ${p => p.theme.spacing(360)};
-  }
 `;

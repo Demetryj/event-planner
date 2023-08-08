@@ -35,10 +35,6 @@ export const Container = styled.div`
     padding-right: ${p => p.theme.spacing(20)};
     width: ${p => p.theme.spacing(320)};
   }
-
-  @media screen and (${p => p.theme.media.big}) {
-    width: ${p => p.theme.spacing(360)};
-  }
 `;
 
 export const Logo = styled(Link)`
