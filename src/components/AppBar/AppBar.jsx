@@ -5,8 +5,8 @@ import {
   chooseCategory,
   sortByValue,
 } from 'redux/filter/filterSlice';
-import { LangBar } from 'components/LangBar';
 
+import { LangBar } from 'components/LangBar';
 import {
   Header,
   Container,
