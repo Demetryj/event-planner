@@ -25,7 +25,7 @@ export const TextArea = styled.textarea`
   padding-top: ${p => p.theme.spacing(4)};
   padding-bottom: ${p => p.theme.spacing(4)};
   padding-left: ${p => p.theme.spacing(3)};
-  padding-right: ${p => p.theme.spacing(9)};
+  padding-right: ${p => p.theme.spacing(10)};
 
   width: 100%;
   height: ${p => p.theme.spacing(39)};
