@@ -1,7 +1,4 @@
-import {
-  // useDispatch,
-  useSelector,
-} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { ArrowBack } from 'components/ArrowBack';
@@ -10,19 +7,24 @@ import { EditForm } from 'components/EventForm';
 import { editSchema } from 'data/editSchema';
 import { selectEvents } from 'redux/events/selectors';
 import { getEventById } from 'utils/getEventById';
+import { updateEvent } from 'redux/events/eventsSlice';
 
 const EditEvent = () => {
   const { id } = useParams();
   const events = useSelector(selectEvents);
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
   const event = getEventById(events, id);
-  const updateEvent = () => {
-    navigate(`/event/${id}`);
-  };
 
   const initialValues = { ...event, picture: '' };
+
+  const changeEvent = values => {
+    const changedEvent = { ...values, picture: event.picture, id: event.id };
+
+    dispatch(updateEvent(changedEvent));
+    navigate(`/event/${id}`);
+  };
 
   return (
     <>
@@ -33,7 +35,7 @@ const EditEvent = () => {
         editSchema={editSchema}
         typeForm="Save"
         location={location}
-        onButtonClick={updateEvent}
+        onButtonClick={changeEvent}
       />
     </>
   );
