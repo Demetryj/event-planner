@@ -4,6 +4,7 @@ import { MdOutlineKeyboardArrowUp } from 'react-icons/md';
 
 export const WrapperBar = styled.div`
   position: relative;
+  cursor: pointer;
 `;
 
 export const WrapperLang = styled.div`
@@ -34,12 +35,10 @@ export const ArrowDown = styled(MdOutlineKeyboardArrowDown)`
   width: ${p => p.theme.spacing(6)};
   height: ${p => p.theme.spacing(6)};
   color: ${p => p.theme.colors.iconLang};
-  cursor: pointer;
 `;
 
 export const ArrowUp = styled(MdOutlineKeyboardArrowUp)`
   width: ${p => p.theme.spacing(6)};
   height: ${p => p.theme.spacing(6)};
   color: ${p => p.theme.colors.iconLang};
-  cursor: pointer;
 `;

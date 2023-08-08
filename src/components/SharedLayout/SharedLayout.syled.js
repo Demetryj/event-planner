@@ -39,7 +39,8 @@ export const Container = styled.div`
   }
 
   @media screen and (${p => p.theme.media.large}) {
-    padding-top: ${p => p.theme.spacing(15)};
+    padding-top: ${p =>
+      p.location !== '/' ? p.theme.spacing(5) : p.theme.spacing(15)};
     padding-left: ${p => p.theme.spacing(20)};
     padding-right: ${p => p.theme.spacing(20)};
     padding-bottom: ${p => p.theme.spacing(19.25)};
