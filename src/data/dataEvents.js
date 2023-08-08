@@ -13,7 +13,7 @@ export const events = [
     title: 'Galery Opening',
     description:
       'Discover an enchanting evening celebrating the world of art at our exclusive gallery opening.',
-    date: '12.08',
+    date: '14.08',
     time: '12:00',
     location: 'Kyiv',
     category: 'Art',
@@ -37,7 +37,7 @@ export const events = [
     title: 'Empower Your Creativity',
     description:
       'Ignite your creativity and nurture your storytelling skills in our immersive Creative Writing Workshop.',
-    date: '12.07',
+    date: '22.08',
     time: '12:00',
     location: 'Kyiv',
     category: 'Workshop',
@@ -49,7 +49,7 @@ export const events = [
     title: 'Summer Soiree',
     description:
       'Embrace the tropical vibes and escape to paradise at our Beach Luau Extravaganza.',
-    date: '12.07',
+    date: '17.10',
     time: '12:00',
     location: 'Kyiv',
     category: 'Party',
@@ -61,7 +61,7 @@ export const events = [
     title: 'Leadership Conference',
     description:
       'Unlock the secrets of effective leadership at our transformative Success Leadership Conference.',
-    date: '12.07',
+    date: '18.09',
     time: '12:00',
     location: 'Kyiv',
     category: 'Business',
@@ -73,7 +73,7 @@ export const events = [
     title: 'Tech Startup Showcase',
     description:
       'Witness the future of technology as innovative startups showcase their groundbreaking ideas.',
-    date: '12.07',
+    date: '15.07',
     time: '12:00',
     location: 'Kyiv',
     category: 'Workshop',
