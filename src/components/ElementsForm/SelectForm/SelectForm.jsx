@@ -16,8 +16,6 @@ export const SelectForm = ({ title, name, values }) => {
   const [isOpen, setIsopen] = useState(false);
   const menuRef = useRef(null);
 
-  console.log(values[name]);
-
   useClickOutside(menuRef, () => {
     setIsopen(false);
   });
@@ -43,7 +41,11 @@ export const SelectForm = ({ title, name, values }) => {
           onClick={handleClickArrow}
         />
       </Label>
-      {!isOpen ? <ArrowDown name={name} /> : <ArrowUp />}
+      {!isOpen ? (
+        <ArrowDown name={name} onClick={handleClickArrow} />
+      ) : (
+        <ArrowUp onClick={handleClickArrow} />
+      )}
       {isOpen && (
         <SelectMenu
           array={name === 'category' ? category : priority}
