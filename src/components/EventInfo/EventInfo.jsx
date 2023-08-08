@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useLocation, useParams, useNavigate } from 'react-router-dom';
-
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { selectEvents } from 'redux/events/selectors';
 import { deleteEvent } from 'redux/events/eventsSlice';
 import { getEventById } from 'utils/getEventById';
@@ -17,10 +16,10 @@ import {
   BtnDelete,
 } from './EventInfo.styled';
 
-export const EventInfo = () => {
+export const EventInfo = ({ location }) => {
   const { id } = useParams();
   const events = useSelector(selectEvents);
-  const location = useLocation();
+  // const location = useLocation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -54,7 +53,7 @@ export const EventInfo = () => {
         </WrapperCont>
 
         <WrapperButton>
-          <Link to="/edit-event" state={{ from: location }}>
+          <Link to={`/edit-event/${id}`} state={{ from: location }}>
             <BtnEdit type="button">Edit</BtnEdit>
           </Link>
 
