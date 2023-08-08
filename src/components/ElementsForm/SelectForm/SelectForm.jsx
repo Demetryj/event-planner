@@ -1,4 +1,8 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import { SelectMenu } from 'components/SelectMenu';
+import { getValueForSelectInput } from 'utils/getValueForSelectInput';
+import { category, priority } from 'data/menuFilter';
+import { useClickOutside } from 'hooks/useClickOutside';
 import {
   WrapperInput,
   Label,
@@ -7,12 +11,16 @@ import {
   ArrowDown,
   ArrowUp,
 } from './SelectForm.styled';
-import { SelectMenu } from 'components/SelectMenu';
-import { getValueForSelectInput } from 'utils/getValueForSelectInput';
-import { category, priority } from 'data/menuFilter';
 
 export const SelectForm = ({ title, name, values }) => {
   const [isOpen, setIsopen] = useState(false);
+  const menuRef = useRef(null);
+
+  console.log(values[name]);
+
+  useClickOutside(menuRef, () => {
+    setIsopen(false);
+  });
 
   const handleClickArrow = () => {
     if (name === 'picture') {
@@ -22,7 +30,7 @@ export const SelectForm = ({ title, name, values }) => {
   };
 
   return (
-    <WrapperInput>
+    <WrapperInput ref={menuRef}>
       <Label htmlFor={name}>
         <Title name={name}>{title}</Title>
         <Input
@@ -32,13 +40,10 @@ export const SelectForm = ({ title, name, values }) => {
           placeholder={isOpen ? getValueForSelectInput(name) : 'Select'}
           readOnly
           isopen={isOpen ? 1 : 0}
+          onClick={handleClickArrow}
         />
-        {!isOpen ? (
-          <ArrowDown onClick={handleClickArrow} name={name} />
-        ) : (
-          <ArrowUp onClick={handleClickArrow} />
-        )}
       </Label>
+      {!isOpen ? <ArrowDown name={name} /> : <ArrowUp />}
       {isOpen && (
         <SelectMenu
           array={name === 'category' ? category : priority}
