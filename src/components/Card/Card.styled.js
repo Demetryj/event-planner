@@ -102,11 +102,10 @@ export const Description = styled.p`
 
 export const LinkButton = styled(Link)`
   display: ${p => (p.isActive ? 'block' : 'none')};
+  margin-left: auto;
 `;
 
 export const Button = styled.button`
-  display: block;
-  margin-left: auto;
   padding: ${p => p.theme.spacing(2.5)} ${p => p.theme.spacing(6)};
 
   font-family: inherit;
