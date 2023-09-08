@@ -1,9 +1,13 @@
+import { useSelector } from 'react-redux';
+import { selectVisibleEvents } from 'redux/filter/selectors';
 import { Box } from 'components/Box';
 import { FilterBar } from 'components/FilterBar';
 import { MainTitle } from 'components/MainTitle';
 import { CardList } from 'components/CardList';
 
 const Home = () => {
+  const visibleEvents = useSelector(selectVisibleEvents);
+
   return (
     <>
       <Box
@@ -17,7 +21,7 @@ const Home = () => {
         <MainTitle display="desktop">My events</MainTitle>
       </Box>
 
-      <CardList />
+      {visibleEvents.length > 0 && <CardList />}
     </>
   );
 };

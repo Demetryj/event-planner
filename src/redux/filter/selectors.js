@@ -13,11 +13,11 @@ export const selectVisibleEvents = createSelector(
     let visibleEvents = events;
 
     if (categoryValue) {
-      visibleEvents = events.filter(event => event.category === categoryValue);
+      return events.filter(event => event.category === categoryValue);
     }
 
     if (search) {
-      visibleEvents = events.filter(
+      return events.filter(
         event =>
           event.title.toLowerCase().includes(normalyzeFilter) ||
           event.description.toLowerCase().includes(normalyzeFilter)
@@ -25,7 +25,7 @@ export const selectVisibleEvents = createSelector(
     }
 
     if (sortBy) {
-      visibleEvents = sortEventsByValue(events, sortBy);
+      visibleEvents = sortEventsByValue(visibleEvents, sortBy);
     }
 
     return visibleEvents;

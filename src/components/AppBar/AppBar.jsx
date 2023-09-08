@@ -21,11 +21,16 @@ export const AppBar = () => {
   const searchValue = useSelector(selectSearch);
   const dispatch = useDispatch();
 
-  const handleCahgeInput = e => dispatch(changeFilter(e.target.value));
+  const handleCahgeInput = e => {
+    dispatch(changeFilter(e.target.value));
+    dispatch(sortByValue(''));
+    dispatch(chooseCategory(''));
+  };
   const clearInput = () => dispatch(changeFilter(''));
   const resetFilter = () => {
     dispatch(chooseCategory(''));
     dispatch(sortByValue(''));
+    dispatch(changeFilter(''));
   };
 
   return (

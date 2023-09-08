@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const WrapperCard = styled.div`
   display: flex;
@@ -20,14 +21,10 @@ export const WrapperCard = styled.div`
 
   cursor: pointer;
 
-  &:hover button,
-  &:focus button {
+  /* &:hover a,
+  &:focus a {
     display: block;
-  }
-
-  & button {
-    display: ${p => (p.status ? 'block' : 'none')};
-  }
+  } */
 `;
 
 export const WrapperEvent = styled.div`
@@ -108,7 +105,12 @@ export const Description = styled.p`
   color: ${p => p.theme.colors.text};
 `;
 
+export const LinkButton = styled(Link)`
+  display: ${p => (p.isActive ? 'block' : 'none')};
+`;
+
 export const Button = styled.button`
+  display: block;
   margin-left: auto;
   padding: ${p => p.theme.spacing(2.5)} ${p => p.theme.spacing(6)};
 

@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useClickOutside } from 'hooks/useClickOutside';
 import {
   WrapperCard,
   WrapperEvent,
@@ -11,6 +11,7 @@ import {
   BoxAbout,
   EventName,
   Description,
+  LinkButton,
   Button,
 } from './Card.styled';
 
@@ -30,12 +31,18 @@ export const Card = ({
   const [isActive, setIsActive] = useState(false);
   const location = useLocation();
 
+  const cardRef = useRef(null);
+
   const handleClick = () => {
     setIsActive(!isActive);
   };
 
+  useClickOutside(cardRef, () => {
+    setIsActive(false);
+  });
+
   return (
-    <WrapperCard onClick={handleClick} picture={picture}>
+    <WrapperCard ref={cardRef} onClick={handleClick} picture={picture}>
       <WrapperEvent>
         <EventType>{category}</EventType>
         <Criterion variant={priority}>{priority}</Criterion>
@@ -51,11 +58,13 @@ export const Card = ({
           <EventName>{title}</EventName>
           <Description>{description}</Description>
 
-          <Link to={`event/${id}`} state={{ from: location }}>
-            <Button type="button" status={isActive}>
-              More info
-            </Button>
-          </Link>
+          <LinkButton
+            to={`event/${id}`}
+            state={{ from: location }}
+            isActive={isActive}
+          >
+            <Button type="button">More info</Button>
+          </LinkButton>
         </BoxAbout>
       </div>
     </WrapperCard>

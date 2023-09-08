@@ -17,7 +17,7 @@ export const FilterBar = () => {
   const [isOpenCategory, setIsOpenCategory] = useState(false);
   const { isMobile } = useMedia();
   const location = useLocation();
-  const dispach = useDispatch();
+  const dispatch = useDispatch();
   const selectedСategory = useSelector(selectCategory);
 
   const handleClickSort = () => {
@@ -31,13 +31,15 @@ export const FilterBar = () => {
   };
 
   const handleChooseCategory = e => {
-    dispach(chooseCategory(e.currentTarget.textContent));
+    dispatch(chooseCategory(e.currentTarget.textContent));
     setIsOpenCategory(false);
+    dispatch(sortByValue(''));
   };
 
   const handleChooseSortBy = e => {
-    dispach(sortByValue(e.currentTarget.dataset.action));
+    dispatch(sortByValue(e.currentTarget.dataset.action));
     setIsOpenSort(false);
+    dispatch(chooseCategory(''));
   };
 
   return (

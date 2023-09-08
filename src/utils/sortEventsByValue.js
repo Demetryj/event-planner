@@ -31,6 +31,7 @@ export const sortEventsByValue = (events, sortValue) => {
       return [...events].sort(
         (a, b) => priorityOrderDown[b.priority] - priorityOrderDown[a.priority]
       );
+
     default:
       break;
   }

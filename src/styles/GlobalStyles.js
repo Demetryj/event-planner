@@ -2,6 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
 
 export const GlobalStyles = createGlobalStyle`
+html {
+  width: 100vw;
+   /* or margin-right: calc(-1 * (100vw - 100%)); */
+   overflow-x: hidden;
+} // прибирає зміщення контента при зникненні/появі полоси прокрутки
+
 body {
   margin: 0;
   position: relative;
