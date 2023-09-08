@@ -3,7 +3,7 @@ import { selectVisibleEvents } from 'redux/filter/selectors';
 import { Box } from 'components/Box';
 import { FilterBar } from 'components/FilterBar';
 import { MainTitle } from 'components/MainTitle';
-import { CardList } from 'components/CardList';
+import { CardList } from 'components/CardList/CardList';
 
 const Home = () => {
   const visibleEvents = useSelector(selectVisibleEvents);
