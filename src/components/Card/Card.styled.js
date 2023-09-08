@@ -20,11 +20,6 @@ export const WrapperCard = styled.div`
   overflow: hidden;
 
   cursor: pointer;
-
-  /* &:hover a,
-  &:focus a {
-    display: block;
-  } */
 `;
 
 export const WrapperEvent = styled.div`
