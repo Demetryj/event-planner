@@ -1,12 +1,12 @@
 import { PaginationElement } from './PaginationCount.styled';
 
-export const PaginationCount = () => {
+export const PaginationCount = ({ handleChange, page, count }) => {
   return (
     <PaginationElement
-      count={988}
-      siblingCount={-1}
-      // page={page}
-      // onChange={handleChange}
+      count={count}
+      siblingCount={0}
+      page={page}
+      onChange={handleChange}
     />
   );
 };
