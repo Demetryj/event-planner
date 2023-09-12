@@ -101,7 +101,7 @@ export const Description = styled.p`
 `;
 
 export const LinkButton = styled(Link)`
-  display: ${p => (p.isActive ? 'block' : 'none')};
+  display: ${p => (p.active ? 'block' : 'none')};
   margin-left: auto;
 `;
 
