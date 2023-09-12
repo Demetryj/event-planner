@@ -7,7 +7,7 @@ export const PaginationCount = ({ handleChange, page, count }) => {
   return (
     <PaginationElement
       count={count}
-      siblingCount={isMobile && count > 100 ? -1 : 0}
+      siblingCount={isMobile ? -1 : 0}
       page={page}
       onChange={handleChange}
     />
