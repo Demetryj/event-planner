@@ -10,8 +10,12 @@ export const List = styled.ul`
   grid-gap: ${p => p.theme.spacing(6)};
 
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: ${p => p.theme.spacing(10)};
   margin-left: auto;
   margin-right: auto;
   padding: 0;
+
+  @media screen and (${p => p.theme.media.large}) {
+    margin-bottom: ${p => p.theme.spacing(8)};
+  }
 `;
