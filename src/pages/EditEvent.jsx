@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { ArrowBack } from 'components/ArrowBack';
 import { MainTitle } from 'components/MainTitle';
 import { EditForm } from 'components/EventForm';
