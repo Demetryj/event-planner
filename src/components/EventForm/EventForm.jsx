@@ -159,6 +159,7 @@ export const EditForm = ({
                       title="Add picture"
                       name="picture"
                       values={values}
+                      disabled
                     />
                     <SelectForm
                       title="Priority"
