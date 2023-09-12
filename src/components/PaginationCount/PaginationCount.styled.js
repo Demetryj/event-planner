@@ -11,7 +11,7 @@ export const PaginationElement = styled(Pagination)`
     margin-left: auto;
   }
 
-  & .MuiPagination-ul.css-wjh20t-MuiPagination-ul {
+  & .MuiPagination-ul {
     justify-content: center;
     gap: 2px;
     padding: 10px;
