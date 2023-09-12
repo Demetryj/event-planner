@@ -4,6 +4,7 @@ import { Box } from 'components/Box';
 import { FilterBar } from 'components/FilterBar';
 import { MainTitle } from 'components/MainTitle';
 import { CardList } from 'components/CardList/CardList';
+import { PaginationCount } from 'components/PaginationCount';
 
 const Home = () => {
   const visibleEvents = useSelector(selectVisibleEvents);
@@ -22,6 +23,8 @@ const Home = () => {
       </Box>
 
       {visibleEvents.length > 0 && <CardList />}
+
+      {visibleEvents.length > 0 && <PaginationCount />}
     </>
   );
 };
