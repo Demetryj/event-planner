@@ -77,11 +77,13 @@ export const theme = {
     regular: 400,
     medium: 500,
     semiBold: 600,
+    bold: 700,
   },
 
   fontSizes: {
     xs: '12px',
     s: '14px',
+    sm: '18px',
     m: '16px',
     l: '24px',
     xl: '32px',
