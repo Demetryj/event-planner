@@ -61,7 +61,7 @@ export const Card = ({
           <LinkButton
             to={`event/${id}`}
             state={{ from: location }}
-            isActive={isActive}
+            active={isActive ? 1 : 0}
           >
             <Button type="button">More info</Button>
           </LinkButton>
