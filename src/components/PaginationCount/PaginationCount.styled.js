@@ -7,30 +7,30 @@ export const PaginationElement = styled(Pagination)`
   box-shadow: ${p => p.theme.shadows.main};
 
   @media screen and (${p => p.theme.media.large}) {
-    max-width: 588px;
+    max-width: ${p => p.theme.spacing(147)};
     margin-left: auto;
   }
 
   & .MuiPagination-ul {
     justify-content: center;
     gap: 2px;
-    padding: 10px;
+    padding: ${p => p.theme.spacing(2.5)};
 
     @media screen and (${p => p.theme.media.medium}) {
-      gap: 36px;
+      gap: ${p => p.theme.spacing(9)};
     }
 
     @media screen and (${p => p.theme.media.large}) {
-      gap: 18px;
+      gap: ${p => p.theme.spacing(4.5)};
     }
   }
 
   & .MuiButtonBase-root {
     margin: 0;
-    padding: 6px;
+    padding: ${p => p.theme.spacing(1.5)};
 
-    width: 40px;
-    height: 40px;
+    width: ${p => p.theme.spacing(10)};
+    height: ${p => p.theme.spacing(10)};
 
     font-family: inherit;
     font-size: ${p => p.theme.fontSizes.sm};
@@ -46,20 +46,20 @@ export const PaginationElement = styled(Pagination)`
     }
 
     @media screen and (${p => p.theme.media.medium}) {
-      width: 64px;
-      height: 64px;
+      width: ${p => p.theme.spacing(16)};
+      height: ${p => p.theme.spacing(16)};
     }
   }
 
   & .MuiPagination-ul .css-1v2lvtn-MuiPaginationItem-root {
     margin: 0;
-    padding: 6px 0px;
+    padding: ${p => p.theme.spacing(1.5)} 0px;
 
     @media screen and (${p => p.theme.media.medium}) {
-      padding-top: 18px;
-      padding-bottom: 18px;
-      width: 64px;
-      height: 64px;
+      padding-top: ${p => p.theme.spacing(4.5)};
+      padding-bottom: ${p => p.theme.spacing(4.5)};
+      width: ${p => p.theme.spacing(16)};
+      height: ${p => p.theme.spacing(16)};
     }
   }
 
@@ -74,8 +74,8 @@ export const PaginationElement = styled(Pagination)`
   }
 
   & .MuiButtonBase-root > svg {
-    width: 24px;
-    height: 24px;
+    width: ${p => p.theme.spacing(6)};
+    height: ${p => p.theme.spacing(6)};
 
     color: ${p => p.theme.colors.button};
   }

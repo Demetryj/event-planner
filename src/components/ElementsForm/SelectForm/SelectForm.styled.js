@@ -87,14 +87,17 @@ export const ArrowDown = styled(MdOutlineKeyboardArrowDown)`
 
 export const ArrowUp = styled(MdOutlineKeyboardArrowUp)`
   position: absolute;
+  top: ${p => p.theme.spacing(10)};
+  right: ${p => p.theme.spacing(4.25)};
+
   width: ${p => p.theme.spacing(6)};
   height: ${p => p.theme.spacing(6)};
   color: ${p => p.theme.colors.iconInput};
 
-  transform: translate(
+  /* transform: translate(
     ${p => p.theme.spacing(-10)},
     ${p => p.theme.spacing(4.25)}
-  );
+  ); */
 
   cursor: pointer;
 `;

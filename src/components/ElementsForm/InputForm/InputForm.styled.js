@@ -26,9 +26,9 @@ export const Input = styled(Field)`
   padding-top: ${p => p.theme.spacing(4)};
   padding-bottom: ${p => p.theme.spacing(4)};
   padding-left: ${p => p.theme.spacing(3)};
-  padding-right: ${p => p.theme.spacing(9)};
+  padding-right: ${p => p.theme.spacing(11)};
 
-  width: calc(100% - 50px);
+  width: calc(100% - 58px);
 
   font-family: inherit;
   font-size: ${p => p.theme.fontSizes.m};
@@ -64,13 +64,11 @@ export const Input = styled(Field)`
 
 export const RemoveIcon = styled(IoMdClose)`
   position: absolute;
+  top: ${p => p.theme.spacing(10)};
+  right: ${p => p.theme.spacing(4.25)};
+
   width: ${p => p.theme.spacing(6)};
   height: ${p => p.theme.spacing(6)};
-
-  transform: translate(
-    ${p => p.theme.spacing(-10)},
-    ${p => p.theme.spacing(4.25)}
-  );
 
   color: ${p => {
     if (p.disabled) {

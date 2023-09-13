@@ -66,13 +66,11 @@ export const TextArea = styled.textarea`
 
 export const RemoveIcon = styled(IoMdClose)`
   position: absolute;
+  top: ${p => p.theme.spacing(10)};
+  right: ${p => p.theme.spacing(4.25)};
+
   width: ${p => p.theme.spacing(6)};
   height: ${p => p.theme.spacing(6)};
-
-  transform: translate(
-    ${p => p.theme.spacing(-10)},
-    ${p => p.theme.spacing(4.25)}
-  );
 
   color: ${p => {
     if (p.disabled) {
