@@ -11,7 +11,7 @@ import {
 
 export const LangBar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const [lang, setLang] = useState('UK');
+  const [lang, setLang] = useState('EN');
 
   const handleOpenLangBar = () => setIsOpenMenu(!isOpenMenu);
 
