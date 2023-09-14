@@ -31,10 +31,11 @@ export const TextArea = styled.textarea`
   height: ${p => p.theme.spacing(39)};
 
   font-family: inherit;
-  font-size: ${p => p.theme.fontSizes.m};
+  font-size: ${p => p.theme.fontSizes.s};
   font-style: inherit;
   font-weight: ${p => p.theme.fontWeights.regular};
-  line-height: ${p => p.theme.lineHeights.l};
+  line-height: ${p => p.theme.lineHeights.m};
+  letter-spacing: 0.25px;
   color: ${p => p.theme.colors.inputText};
 
   resize: none;
