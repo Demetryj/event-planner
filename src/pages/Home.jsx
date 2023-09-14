@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { selectVisibleEvents } from 'redux/filter/selectors';
 import { Box } from 'components/Box';
 import { FilterBar } from 'components/FilterBar';
@@ -15,6 +16,8 @@ const Home = () => {
   const total = events.length;
   const [page, setPage] = useState(1);
   const [visibleEvents, setVisibleEvents] = useState(events);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     setVisibleEvents(events.slice(0, per_page));
@@ -40,7 +43,7 @@ const Home = () => {
         mb={{ lg: 40 }}
       >
         <FilterBar />
-        <MainTitle display="desktop">My events</MainTitle>
+        <MainTitle display="desktop">{t('myEvents.mainTitle')}</MainTitle>
       </Box>
 
       {visibleEvents.length > 0 && <CardList visibleEvents={visibleEvents} />}
