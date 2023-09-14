@@ -1,8 +1,7 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams, useNavigate } from 'react-router-dom';
-import { selectEvents } from 'redux/events/selectors';
+import { useDispatch } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { deleteEvent } from 'redux/events/eventsSlice';
-import { getEventById } from 'utils/getEventById';
 import imgDefault from 'images/default-W@2x.jpg';
 import {
   Wrapper,
@@ -17,14 +16,14 @@ import {
   BtnDelete,
 } from './EventInfo.styled';
 
-export const EventInfo = ({ location }) => {
-  const { id } = useParams();
-  const events = useSelector(selectEvents);
+export const EventInfo = ({ location, data }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const data = getEventById(events, id);
+  const { t } = useTranslation();
+
   const {
+    id,
     description,
     date,
     time,
@@ -56,11 +55,11 @@ export const EventInfo = ({ location }) => {
 
         <WrapperButton>
           <Link to={`/edit-event/${id}`} state={{ from: location }}>
-            <BtnEdit type="button">Edit</BtnEdit>
+            <BtnEdit type="button">{t('event.editBtn')}</BtnEdit>
           </Link>
 
           <BtnDelete type="button" onClick={handleDeleteEvent}>
-            Delete event
+            {t('event.deleteBtn')}
           </BtnDelete>
         </WrapperButton>
       </WrapperInfo>
