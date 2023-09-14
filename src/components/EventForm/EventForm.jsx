@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Formik } from 'formik';
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import { InputForm } from 'components/ElementsForm/InputForm';
 import { TextAreaForm } from 'components/ElementsForm/TextAreaForm';
@@ -17,6 +18,8 @@ export const EditForm = ({
 }) => {
   const { isDesktop } = useMedia();
   const isFirstRender = useRef(true);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (isFirstRender) {
@@ -49,27 +52,27 @@ export const EditForm = ({
                     width="100%"
                   >
                     <InputForm
-                      title="Title"
+                      title={t('editEvent.title')}
                       name="title"
                       errors={errors}
                       values={values}
                     />
                     <TextAreaForm
-                      title="Description"
+                      title={t('editEvent.description')}
                       name="description"
                       errors={errors}
                       values={values}
                     />
 
                     <InputForm
-                      title={'Date'}
+                      title={t('editEvent.date')}
                       name="date"
                       errors={errors}
                       values={values}
                     />
 
                     <InputForm
-                      title={'Time'}
+                      title={t('editEvent.time')}
                       name="time"
                       errors={errors}
                       values={values}
@@ -78,23 +81,23 @@ export const EditForm = ({
 
                   <Box display={{ md: 'block', lg: 'none' }} width="100%">
                     <InputForm
-                      title="Location"
+                      title={t('editEvent.location')}
                       name="location"
                       errors={errors}
                       values={values}
                     />
                     <SelectForm
-                      title="Category"
+                      title={t('editEvent.category')}
                       name="category"
                       values={values}
                     />
                     <SelectForm
-                      title="Add picture"
+                      title={t('editEvent.addPicture')}
                       name="picture"
                       values={values}
                     />
                     <SelectForm
-                      title="Priority"
+                      title={t('editEvent.priority')}
                       name="priority"
                       values={values}
                     />
@@ -113,13 +116,13 @@ export const EditForm = ({
                 <Box display="flex">
                   <Box width="100%" mr={42}>
                     <InputForm
-                      title={'Title'}
+                      title={t('editEvent.title')}
                       name="title"
                       errors={errors}
                       values={values}
                     />
                     <TextAreaForm
-                      title={'Description'}
+                      title={t('editEvent.description')}
                       name="description"
                       errors={errors}
                       values={values}
@@ -128,21 +131,21 @@ export const EditForm = ({
 
                   <Box width="100%" mr={42}>
                     <InputForm
-                      title={'Date'}
+                      title={t('editEvent.date')}
                       name="date"
                       errors={errors}
                       values={values}
                     />
 
                     <InputForm
-                      title={'Time'}
+                      title={t('editEvent.time')}
                       name="time"
                       errors={errors}
                       values={values}
                     />
 
                     <InputForm
-                      title={'Location'}
+                      title={t('editEvent.location')}
                       name="location"
                       errors={errors}
                       values={values}
@@ -151,18 +154,18 @@ export const EditForm = ({
 
                   <Box width="100%">
                     <SelectForm
-                      title="Category"
+                      title={t('editEvent.category')}
                       name="category"
                       values={values}
                     />
                     <SelectForm
-                      title="Add picture"
+                      title={t('editEvent.addPicture')}
                       name="picture"
                       values={values}
                       disabled
                     />
                     <SelectForm
-                      title="Priority"
+                      title={t('editEvent.priority')}
                       name="priority"
                       values={values}
                     />
