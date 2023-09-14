@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { selectSearch } from 'redux/filter/selectors';
 import {
   changeFilter,
@@ -20,6 +21,8 @@ import {
 export const AppBar = () => {
   const searchValue = useSelector(selectSearch);
   const dispatch = useDispatch();
+
+  const { t } = useTranslation();
 
   const handleCahgeInput = e => {
     dispatch(changeFilter(e.target.value));
@@ -45,7 +48,7 @@ export const AppBar = () => {
             type="text"
             name="search"
             value={searchValue}
-            placeholder="Search by keywords"
+            placeholder={t('header.search')}
             autoComplete="off"
             onChange={handleCahgeInput}
           />
