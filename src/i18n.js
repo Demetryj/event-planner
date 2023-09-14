@@ -8,8 +8,8 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    debug: true,
-    fallbackLng: 'uk',
+    debug: false,
+    fallbackLng: 'en',
 
     detection: {
       order: ['localStorage', 'cookie'],
@@ -21,7 +21,7 @@ i18n
     },
 
     backend: {
-      loadPath: 'event-planner/locales/uk/translation.json',
+      loadPath: 'event-planner/locales/{{lng}}/translation.json',
     },
   });
 
