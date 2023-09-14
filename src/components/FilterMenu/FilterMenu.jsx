@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 import { BsArrowUpShort } from 'react-icons/bs';
 import { BsArrowDownShort } from 'react-icons/bs';
 import { useClickOutside } from 'hooks/useClickOutside';
+import { translateData } from 'utils/translateData';
 import {
   WrapperMenu,
   WrapperHead,
@@ -52,7 +53,7 @@ export const FilterMenu = ({
                 key={nanoid()}
                 variant={variant}
                 onClick={chooseSortBy}
-                data-action={`${item} up`}
+                data-action={`${translateData(item)} up`}
               >
                 <FilterName>{item}</FilterName>
                 <BsArrowUpShort />
@@ -61,7 +62,7 @@ export const FilterMenu = ({
                 key={nanoid()}
                 variant={variant}
                 onClick={chooseSortBy}
-                data-action={`${item} down`}
+                data-action={`${translateData(item)} down`}
               >
                 <FilterName>{item}</FilterName>
                 <BsArrowDownShort />

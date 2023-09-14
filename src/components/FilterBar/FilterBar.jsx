@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { HiOutlinePlus } from 'react-icons/hi';
 import { CiFilter } from 'react-icons/ci';
 import { LiaSlidersHSolid } from 'react-icons/lia';
 import { Sort } from 'components/Sort';
 import { FilterMenu } from 'components/FilterMenu/FilterMenu';
-import { category, sortBy } from 'data/menuFilter';
 import { useMedia } from 'hooks/useMedia';
 import { chooseCategory, sortByValue } from 'redux/filter/filterSlice';
 import { selectCategory } from 'redux/filter/selectors';
@@ -19,6 +19,10 @@ export const FilterBar = () => {
   const location = useLocation();
   const dispatch = useDispatch();
   const selectedСategory = useSelector(selectCategory);
+
+  const { t } = useTranslation();
+  const categoryList = t('categoryList', { returnObjects: true });
+  const sortByList = t('sortByList', { returnObjects: true });
 
   const handleClickSort = () => {
     setIsOpenCategory(false);
@@ -46,34 +50,42 @@ export const FilterBar = () => {
     <WrapperBar isOpenSort={isOpenSort}>
       {!isOpenCategory ? (
         <Sort onClick={handleClickCategory}>
-          <p>{selectedСategory ? selectedСategory : 'Category'}</p>
+          {selectedСategory ? (
+            <p>{selectedСategory}</p>
+          ) : (
+            <p>{t('filterBar.category')}</p>
+          )}
           <CiFilter />
         </Sort>
       ) : (
         <FilterMenu
-          array={category}
+          array={categoryList}
           onClick={handleClickCategory}
           onChooseCategory={handleChooseCategory}
         >
-          <p>{selectedСategory ? selectedСategory : 'Category'}</p>
+          {selectedСategory ? (
+            <p>{selectedСategory}</p>
+          ) : (
+            <p>{t('filterBar.category')}</p>
+          )}
           <CiFilter />
         </FilterMenu>
       )}
 
       {!isOpenSort ? (
         <Sort onClick={handleClickSort}>
-          <p>Sort By</p>
+          <p>{t('filterBar.sortBy')}</p>
           <LiaSlidersHSolid />
         </Sort>
       ) : (
         <FilterMenu
-          array={sortBy}
+          array={sortByList}
           variant="sortBy"
           onClick={handleClickSort}
           chooseSortBy={handleChooseSortBy}
         >
           {isMobile && <LiaSlidersHSolid />}
-          <p>Sort By</p>
+          <p>{t('filterBar.sortBy')}</p>
           {!isMobile && <LiaSlidersHSolid />}
         </FilterMenu>
       )}
@@ -81,7 +93,7 @@ export const FilterBar = () => {
       <Link to="/create-event" state={{ from: location }}>
         <BtnAdd type="button">
           <HiOutlinePlus size={24} color="white" />
-          <TextBtn>Add new event</TextBtn>
+          <TextBtn>{t('filterBar.addEvent')}</TextBtn>
         </BtnAdd>
       </Link>
     </WrapperBar>
