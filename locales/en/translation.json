@@ -1,0 +1,53 @@
+{
+  "header": {
+    "search": "Search by keywords"
+  },
+
+  "myEvents": {
+    "mainTitle": "My events"
+  },
+
+  "filterBar": {
+    "category": "Category",
+    "sortBy": "Sort by",
+    "addEvent": "Add new event"
+  },
+
+  "categoryList": [
+    "Art",
+    "Music",
+    "Business",
+    "Conference",
+    "Workshop",
+    "Party",
+    "Sport"
+  ],
+
+  "sortByList": ["by name", "by date", "by priority"],
+
+  "priorityLis": ["High", "Medium", "Low"],
+
+  "card": {
+    "button": "More info"
+  },
+
+  "arrowBack": "Back",
+
+  "event": {
+    "editBtn": "Edit",
+    "deleteBtn": "Delete event"
+  },
+
+  "editEvent": {
+    "mainTitle": "Edit event",
+    "title": "Title",
+    "description": "Description",
+    "date": "Date",
+    "time": "Time",
+    "location": "Location",
+    "category": "Category",
+    "addPicture": "Add picture",
+    "priority": "Priority",
+    "button": "Save"
+  }
+}
