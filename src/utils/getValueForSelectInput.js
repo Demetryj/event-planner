@@ -1,16 +1,18 @@
+import i18n from 'i18next';
+
 export const getValueForSelectInput = nameInput => {
   switch (nameInput) {
     case 'date':
-      return 'Select date';
+      return i18n.t('selectFormPlaceholder.date');
 
     case 'time':
-      return 'Select time';
+      return i18n.t('selectFormPlaceholder.time');
 
     case 'category':
-      return 'Select category';
+      return i18n.t('selectFormPlaceholder.category');
 
     case 'priority':
-      return 'Select priority';
+      return i18n.t('selectFormPlaceholder.priority');
 
     default:
       return;
