@@ -14,6 +14,7 @@ const CastomTextArea = props => {
 
 export const TextAreaForm = props => {
   const { title, name, values, errors } = props;
+
   return (
     <WrapperTextArea>
       <Label htmlFor={name}>
@@ -22,7 +23,6 @@ export const TextAreaForm = props => {
           id={name}
           type="text"
           name={name}
-          placeholder="Input"
           err={errors[name]}
           as={CastomTextArea}
         />
