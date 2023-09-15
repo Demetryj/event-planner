@@ -21,7 +21,7 @@ i18n
     },
 
     backend: {
-      loadPath: '/locales/{{lng}}/translation.json',
+      loadPath: '/event-planner/locales/{{lng}}/translation.json',
     },
   });
 
