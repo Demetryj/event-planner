@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { nanoid } from 'nanoid';
+import { useTranslation } from 'react-i18next';
 import { ArrowBack } from 'components/ArrowBack';
 import { MainTitle } from 'components/MainTitle';
 import { EditForm } from 'components/EventForm';
@@ -22,6 +23,7 @@ const initialValues = {
 const CreateEvent = () => {
   const dispatch = useDispatch();
   const location = useLocation();
+  const { t } = useTranslation();
 
   const createNewEvent = values => {
     const newEvent = { ...values, picture: imgDefault, id: nanoid() };
@@ -31,11 +33,11 @@ const CreateEvent = () => {
   return (
     <>
       <ArrowBack />
-      <MainTitle>Create new event</MainTitle>
+      <MainTitle>{t('mainTitles.createEvent')}</MainTitle>
       <EditForm
         initialValues={initialValues}
         editSchema={editSchema}
-        typeForm="Add event"
+        typeForm={t('eventForm.buttonAdd')}
         location={location}
         onButtonClick={createNewEvent}
       />
