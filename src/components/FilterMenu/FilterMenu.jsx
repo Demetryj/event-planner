@@ -40,6 +40,7 @@ export const FilterMenu = ({
               key={nanoid()}
               variant={variant}
               onClick={onChooseCategory}
+              data-action={`${translateData(item)}`}
             >
               <FilterName>{item}</FilterName>
             </FilterItem>
