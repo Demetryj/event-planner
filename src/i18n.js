@@ -20,9 +20,9 @@ i18n
       escapeValue: false,
     },
 
-    backend: {
-      loadPath: 'event-planner/locales/{{lng}}/translation.json',
-    },
+    // backend: {
+    //   loadPath: 'event-planner/locales/{{lng}}/translation.json',
+    // },
   });
 
 export default i18n;
