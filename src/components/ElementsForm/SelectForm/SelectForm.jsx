@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { SelectMenu } from 'components/SelectMenu';
 import { getValueForSelectInput } from 'utils/getValueForSelectInput';
-import { category, priority } from 'data/menuFilter';
 import { useClickOutside } from 'hooks/useClickOutside';
 import {
   WrapperInput,
@@ -15,6 +15,10 @@ import {
 export const SelectForm = ({ title, name, values }) => {
   const [isOpen, setIsopen] = useState(false);
   const menuRef = useRef(null);
+
+  const { t } = useTranslation();
+  const categoryList = t('categoryList', { returnObjects: true });
+  const priorityList = t('priorityList', { returnObjects: true });
 
   useClickOutside(menuRef, () => {
     setIsopen(false);
@@ -30,12 +34,14 @@ export const SelectForm = ({ title, name, values }) => {
   return (
     <WrapperInput ref={menuRef}>
       <Label htmlFor={name}>
-        <Title name={name}>{title}</Title>
+        <Title name={name} visible={!isOpen}>
+          {title}
+        </Title>
         <Input
           id={name}
           type="text"
           name={name}
-          placeholder={isOpen ? getValueForSelectInput(name) : 'Select'}
+          placeholder={isOpen ? getValueForSelectInput(name) : ''}
           readOnly
           isopen={isOpen ? 1 : 0}
           onClick={handleClickArrow}
@@ -48,7 +54,7 @@ export const SelectForm = ({ title, name, values }) => {
       )}
       {isOpen && (
         <SelectMenu
-          array={name === 'category' ? category : priority}
+          array={name === 'category' ? categoryList : priorityList}
           closeMenu={setIsopen}
           values={values}
           name={name}
