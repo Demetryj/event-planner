@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/event-planner/static/css/main.7cda0caf.css",
-    "main.js": "/event-planner/static/js/main.c6fceb07.js",
-    "static/js/749.dc1700ff.chunk.js": "/event-planner/static/js/749.dc1700ff.chunk.js",
+    "main.js": "/event-planner/static/js/main.f7630bf8.js",
+    "static/js/749.9b58537e.chunk.js": "/event-planner/static/js/749.9b58537e.chunk.js",
     "static/js/711.1e8df15a.chunk.js": "/event-planner/static/js/711.1e8df15a.chunk.js",
     "static/js/438.e6b52076.chunk.js": "/event-planner/static/js/438.e6b52076.chunk.js",
     "static/js/553.c8e948f2.chunk.js": "/event-planner/static/js/553.c8e948f2.chunk.js",
@@ -27,8 +27,8 @@
     "index.html": "/event-planner/index.html",
     "static/media/getFetch.cjs": "/event-planner/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.7cda0caf.css.map": "/event-planner/static/css/main.7cda0caf.css.map",
-    "main.c6fceb07.js.map": "/event-planner/static/js/main.c6fceb07.js.map",
-    "749.dc1700ff.chunk.js.map": "/event-planner/static/js/749.dc1700ff.chunk.js.map",
+    "main.f7630bf8.js.map": "/event-planner/static/js/main.f7630bf8.js.map",
+    "749.9b58537e.chunk.js.map": "/event-planner/static/js/749.9b58537e.chunk.js.map",
     "711.1e8df15a.chunk.js.map": "/event-planner/static/js/711.1e8df15a.chunk.js.map",
     "438.e6b52076.chunk.js.map": "/event-planner/static/js/438.e6b52076.chunk.js.map",
     "553.c8e948f2.chunk.js.map": "/event-planner/static/js/553.c8e948f2.chunk.js.map",
@@ -41,6 +41,6 @@
   },
   "entrypoints": [
     "static/css/main.7cda0caf.css",
-    "static/js/main.c6fceb07.js"
+    "static/js/main.f7630bf8.js"
   ]
 }
