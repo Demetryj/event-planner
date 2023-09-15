@@ -31,11 +31,11 @@ const EditEvent = () => {
   return (
     <>
       <ArrowBack />
-      <MainTitle>{t('editEvent.mainTitle')}</MainTitle>
+      <MainTitle>{t('mainTitles.editEvent')}</MainTitle>
       <EditForm
         initialValues={initialValues}
         editSchema={editSchema}
-        typeForm={t('editEvent.button')}
+        typeForm={t('eventForm.buttonSave')}
         location={location}
         onButtonClick={changeEvent}
       />

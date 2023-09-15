@@ -42,8 +42,8 @@ const Home = () => {
         justifyContent={{ lg: 'space-between' }}
         mb={{ lg: 40 }}
       >
-        <FilterBar />
-        <MainTitle display="desktop">{t('myEvents.mainTitle')}</MainTitle>
+        <FilterBar resetPagination={setPage} />
+        <MainTitle display="desktop">{t('mainTitles.myEvents')}</MainTitle>
       </Box>
 
       {visibleEvents.length > 0 && <CardList visibleEvents={visibleEvents} />}
