@@ -35,7 +35,7 @@ export const FilterBar = ({ resetPagination }) => {
   };
 
   const handleChooseCategory = e => {
-    dispatch(chooseCategory(e.currentTarget.textContent));
+    dispatch(chooseCategory(e.currentTarget.dataset.action));
     setIsOpenCategory(false);
     dispatch(sortByValue(''));
     resetPagination(1);
