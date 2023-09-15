@@ -12,7 +12,7 @@ import { chooseCategory, sortByValue } from 'redux/filter/filterSlice';
 import { selectCategory } from 'redux/filter/selectors';
 import { WrapperBar, BtnAdd, TextBtn } from './FilterBar.styled';
 
-export const FilterBar = () => {
+export const FilterBar = ({ resetPagination }) => {
   const [isOpenSort, setIsOpenSort] = useState(false);
   const [isOpenCategory, setIsOpenCategory] = useState(false);
   const { isMobile } = useMedia();
@@ -38,12 +38,14 @@ export const FilterBar = () => {
     dispatch(chooseCategory(e.currentTarget.textContent));
     setIsOpenCategory(false);
     dispatch(sortByValue(''));
+    resetPagination(1);
   };
 
   const handleChooseSortBy = e => {
     dispatch(sortByValue(e.currentTarget.dataset.action));
     setIsOpenSort(false);
     dispatch(chooseCategory(''));
+    resetPagination(1);
   };
 
   return (
