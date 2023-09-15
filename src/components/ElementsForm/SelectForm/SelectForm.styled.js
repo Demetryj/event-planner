@@ -20,7 +20,9 @@ export const Title = styled.p`
   color: ${p =>
     p.name === 'picture'
       ? p.theme.colors.disabledInput
-      : p.theme.colors.purpleText};
+      : p.visible === true
+      ? p.theme.colors.purpleText
+      : 'transparent'};
 `;
 
 export const Label = styled.label`
@@ -31,9 +33,9 @@ export const Input = styled(Field)`
   padding-top: ${p => p.theme.spacing(4)};
   padding-bottom: ${p => p.theme.spacing(4)};
   padding-left: ${p => p.theme.spacing(3)};
-  padding-right: ${p => p.theme.spacing(9)};
+  padding-right: ${p => p.theme.spacing(11)};
 
-  width: calc(100% - 50px);
+  width: calc(100% - 58px);
 
   font-family: inherit;
   font-size: ${p => p.theme.fontSizes.m};
