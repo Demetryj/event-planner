@@ -14,13 +14,7 @@ export const InputForm = props => {
     <WrapperInput>
       <Label htmlFor={name}>
         <Title>{title}</Title>
-        <Input
-          id={name}
-          type="text"
-          name={name}
-          placeholder="Input"
-          err={errors[name]}
-        />
+        <Input id={name} type="text" name={name} err={errors[name]} />
         <RemoveIcon
           disabled={values[name] === ''}
           err={errors[name]}
