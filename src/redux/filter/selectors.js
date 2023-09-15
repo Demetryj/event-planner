@@ -14,9 +14,9 @@ export const selectVisibleEvents = createSelector(
     let visibleEvents = events;
 
     if (categoryValue) {
-      const categoryName = translateData(categoryValue);
-
-      return events.filter(event => event.category === categoryName);
+      return events.filter(
+        event => translateData(event.category) === categoryValue
+      );
     }
 
     if (search) {
