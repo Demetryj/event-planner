@@ -3,8 +3,10 @@
     "search": "Search by keywords"
   },
 
-  "myEvents": {
-    "mainTitle": "My events"
+  "mainTitles": {
+    "myEvents": "My events",
+    "editEvent": "Edit event",
+    "createEvent": "Create new event"
   },
 
   "filterBar": {
@@ -25,7 +27,7 @@
 
   "sortByList": ["by name", "by date", "by priority"],
 
-  "priorityLis": ["High", "Medium", "Low"],
+  "priorityList": ["High", "Medium", "Low"],
 
   "card": {
     "button": "More info"
@@ -38,16 +40,24 @@
     "deleteBtn": "Delete event"
   },
 
-  "editEvent": {
-    "mainTitle": "Edit event",
+  "eventForm": {
     "title": "Title",
     "description": "Description",
-    "date": "Date",
-    "time": "Time",
+    "date": "Select date",
+    "time": "Select time",
     "location": "Location",
     "category": "Category",
     "addPicture": "Add picture",
     "priority": "Priority",
-    "button": "Save"
+    "buttonSave": "Save",
+    "buttonAdd": "Add event",
+    "errorMessage": "Invalid input"
+  },
+
+  "selectFormPlaceholder": {
+    "date": "Select date",
+    "time": "Select time",
+    "category": "Select category",
+    "priority": "Select priority"
   }
 }

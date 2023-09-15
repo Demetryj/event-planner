@@ -3,8 +3,10 @@
     "search": "Пошук за ключовими словами"
   },
 
-  "myEvents": {
-    "mainTitle": "Мої події"
+  "mainTitles": {
+    "myEvents": "Мої події",
+    "editEvent": "Редагувати подію",
+    "createEvent": "Створити нову подію"
   },
 
   "filterBar": {
@@ -25,7 +27,7 @@
 
   "sortByList": ["за назвою", "за датою", "за пріоритетом"],
 
-  "priorityLis": ["Високий", "Середній", "Низький"],
+  "priorityList": ["Високий", "Середній", "Низький"],
 
   "card": {
     "button": "Детальніше"
@@ -38,16 +40,24 @@
     "deleteBtn": "Видалити подію"
   },
 
-  "editEvent": {
-    "mainTitle": "Редагувати подію",
+  "eventForm": {
     "title": "Назва",
     "description": "Опис",
-    "date": "Дата",
-    "time": "Час",
+    "date": "Обрати дату",
+    "time": "Обрати чac",
     "location": "Місце",
     "category": "Категорія",
     "addPicture": "Додати зображення",
     "priority": "Пріоритет",
-    "button": "Зберегти"
+    "buttonSave": "Зберегти",
+    "buttonAdd": "Додати подію",
+    "errorMessage": "Неправильний формат"
+  },
+
+  "selectFormPlaceholder": {
+    "date": "Обрати дату",
+    "time": "Обрати час",
+    "category": "Обрати категорію",
+    "priority": "Обрати пріоритет"
   }
 }
