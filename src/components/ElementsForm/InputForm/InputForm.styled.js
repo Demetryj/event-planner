@@ -7,7 +7,8 @@ export const WrapperInput = styled.div`
   margin-bottom: ${p => p.theme.spacing(5)};
 `;
 
-export const Title = styled.p`
+export const Label = styled.label`
+  display: block;
   margin-bottom: ${p => p.theme.spacing(2)};
 
   font-size: ${p => p.theme.fontSizes.m};

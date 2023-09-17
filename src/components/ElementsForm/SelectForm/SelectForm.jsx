@@ -5,7 +5,7 @@ import { getValueForSelectInput } from 'utils/getValueForSelectInput';
 import { useClickOutside } from 'hooks/useClickOutside';
 import {
   WrapperInput,
-  Title,
+  Label,
   Input,
   ArrowDown,
   ArrowUp,
@@ -32,20 +32,20 @@ export const SelectForm = ({ title, name, values }) => {
 
   return (
     <WrapperInput ref={menuRef}>
-      <label htmlFor={name}>
-        <Title name={name} visible={!isOpen}>
-          {title}
-        </Title>
-        <Input
-          id={name}
-          type="text"
-          name={name}
-          placeholder={isOpen ? getValueForSelectInput(name) : ''}
-          readOnly
-          isopen={isOpen ? 1 : 0}
-          onClick={handleClickArrow}
-        />
-      </label>
+      <Label htmlFor={name} name={name} visible={!isOpen}>
+        {title}
+      </Label>
+
+      <Input
+        id={name}
+        type="text"
+        name={name}
+        placeholder={isOpen ? getValueForSelectInput(name) : ''}
+        readOnly
+        isopen={isOpen ? 1 : 0}
+        onClick={handleClickArrow}
+      />
+
       {!isOpen ? (
         <ArrowDown name={name} onClick={handleClickArrow} />
       ) : (

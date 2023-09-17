@@ -2,7 +2,6 @@ import { Field } from 'formik';
 import { InputError } from '../InputError';
 import {
   WrapperTextArea,
-  Title,
   Label,
   TextArea,
   RemoveIcon,
@@ -17,24 +16,23 @@ export const TextAreaForm = props => {
 
   return (
     <WrapperTextArea>
-      <Label htmlFor={name}>
-        <Title>{title}</Title>
-        <Field
-          id={name}
-          type="text"
-          name={name}
-          err={errors[name]}
-          as={CastomTextArea}
-        />
-        <RemoveIcon
-          disabled={values[name] === ''}
-          err={errors[name]}
-          onClick={() => {
-            values[name] = '';
-            document.getElementById(name).value = '';
-          }}
-        />
-      </Label>
+      <Label htmlFor={name}>{title} </Label>
+      <Field
+        id={name}
+        type="text"
+        name={name}
+        err={errors[name]}
+        as={CastomTextArea}
+      />
+      <RemoveIcon
+        disabled={values[name] === ''}
+        err={errors[name]}
+        onClick={() => {
+          values[name] = '';
+          document.getElementById(name).value = '';
+        }}
+      />
+
       {errors[name] && <InputError name={name} />}
     </WrapperTextArea>
   );

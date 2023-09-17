@@ -6,7 +6,8 @@ export const WrapperTextArea = styled.div`
   margin-bottom: ${p => p.theme.spacing(5)};
 `;
 
-export const Title = styled.p`
+export const Label = styled.label`
+  display: block;
   margin-bottom: ${p => p.theme.spacing(2)};
 
   font-size: ${p => p.theme.fontSizes.m};
@@ -15,10 +16,6 @@ export const Title = styled.p`
   letter-spacing: 0.4px;
 
   color: ${p => p.theme.colors.purpleText};
-`;
-
-export const Label = styled.label`
-  position: relative;
 `;
 
 export const TextArea = styled.textarea`
