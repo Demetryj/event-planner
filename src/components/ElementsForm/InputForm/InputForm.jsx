@@ -1,18 +1,12 @@
 import { InputError } from '../InputError';
-import {
-  WrapperInput,
-  Title,
-  Label,
-  Input,
-  RemoveIcon,
-} from './InputForm.styled';
+import { WrapperInput, Title, Input, RemoveIcon } from './InputForm.styled';
 
 export const InputForm = props => {
   const { title, name, values, errors } = props;
 
   return (
     <WrapperInput>
-      <Label htmlFor={name}>
+      <label htmlFor={name}>
         <Title>{title}</Title>
         <Input id={name} type="text" name={name} err={errors[name]} />
         <RemoveIcon
@@ -23,7 +17,7 @@ export const InputForm = props => {
             document.getElementById(name).value = '';
           }}
         />
-      </Label>
+      </label>
       {errors[name] && <InputError name={name} />}
     </WrapperInput>
   );
