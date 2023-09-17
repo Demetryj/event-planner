@@ -25,10 +25,6 @@ export const Title = styled.p`
       : 'transparent'};
 `;
 
-export const Label = styled.label`
-  position: relative;
-`;
-
 export const Input = styled(Field)`
   padding-top: ${p => p.theme.spacing(4)};
   padding-bottom: ${p => p.theme.spacing(4)};
@@ -72,17 +68,21 @@ export const Input = styled(Field)`
 
 export const ArrowDown = styled(MdOutlineKeyboardArrowDown)`
   position: absolute;
+  top: ${p => p.theme.spacing(10)};
+  right: ${p => p.theme.spacing(4.25)};
+
   width: ${p => p.theme.spacing(6)};
   height: ${p => p.theme.spacing(6)};
+
   color: ${p =>
     p.name === 'picture'
       ? p.theme.colors.iconDisabled
       : p.theme.colors.iconInput};
 
-  transform: translate(
+  /* transform: translate(
     ${p => p.theme.spacing(-10)},
     ${p => p.theme.spacing(4.25)}
-  );
+  ); */
 
   cursor: ${p => (p.name === 'picture' ? 'arrow' : 'pointer')};
 `;
@@ -94,6 +94,7 @@ export const ArrowUp = styled(MdOutlineKeyboardArrowUp)`
 
   width: ${p => p.theme.spacing(6)};
   height: ${p => p.theme.spacing(6)};
+
   color: ${p => p.theme.colors.iconInput};
 
   /* transform: translate(

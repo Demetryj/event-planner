@@ -18,10 +18,6 @@ export const Title = styled.p`
   color: ${p => p.theme.colors.purpleText};
 `;
 
-export const Label = styled.label`
-  position: relative;
-`;
-
 export const Input = styled(Field)`
   padding-top: ${p => p.theme.spacing(4)};
   padding-bottom: ${p => p.theme.spacing(4)};
