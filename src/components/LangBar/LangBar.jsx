@@ -11,7 +11,9 @@ import {
 
 export const LangBar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const [lang, setLang] = useState('EN');
+  const [lang, setLang] = useState(() =>
+    localStorage.getItem('i18nextLng').toUpperCase()
+  );
 
   const handleOpenLangBar = () => setIsOpenMenu(!isOpenMenu);
 
