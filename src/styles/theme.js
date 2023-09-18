@@ -9,6 +9,8 @@ export const theme = {
 
     bar: '#3F3F3F',
     menu: '#ACA7C3',
+    pink: '#FF2B77',
+    purple: '#7B61FF',
 
     whiteText: '#FFFFFF',
     purpleText: '#7B61FF',
@@ -114,6 +116,7 @@ export const theme = {
   shadows: {
     main: '2px 4px 9px 0px rgba(166, 141, 174, 0.28)',
     menu: '0px 4px 10px 0px rgba(0, 0, 0, 0.25)',
+    calendar: '0px 0px 14px 0px rgba(0, 0, 0, 0.07)',
   },
 
   transitions: {
