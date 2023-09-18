@@ -10,15 +10,13 @@ export const WrapperBar = styled.div`
   margin-bottom: ${p => p.theme.spacing(10)};
 
   @media screen and (${p => p.theme.media.medium}) {
-    gap: ${p => (p.isOpenSort ? p.theme.spacing(55) : p.theme.spacing(6))};
+    gap: ${p => (p.isOpenSort ? p.theme.spacing(48.5) : p.theme.spacing(6))};
   }
 
   @media screen and (${p => p.theme.media.large}) {
     margin-bottom: ${p => p.theme.spacing(0)};
   }
 `;
-
-
 
 export const BtnAdd = styled.button`
   display: flex;

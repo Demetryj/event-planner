@@ -3,13 +3,11 @@ import styled from 'styled-components';
 export const WrapperMenu = styled.div`
   position: absolute;
   right: ${p =>
-    p.variant === 'sortBy' ? p.theme.spacing(20) : p.theme.spacing(15)};
+    p.variant === 'sortBy' ? p.theme.spacing(20) : p.theme.spacing(18)};
+
   display: flex;
   align-items: center;
   flex-direction: column;
-
-  width: ${p =>
-    p.variant === 'sortBy' ? p.theme.spacing(42.5) : p.theme.spacing(39.5)};
 
   border-radius: ${p => p.theme.radii.s};
   background-color: ${p => p.theme.colors.backgroundWhite};
@@ -17,7 +15,7 @@ export const WrapperMenu = styled.div`
 
   @media screen and (${p => p.theme.media.medium}) {
     right: ${p =>
-      p.variant === 'sortBy' ? p.theme.spacing(54) : p.theme.spacing(91.5)};
+      p.variant === 'sortBy' ? p.theme.spacing(54) : p.theme.spacing(92)};
   }
 `;
 
