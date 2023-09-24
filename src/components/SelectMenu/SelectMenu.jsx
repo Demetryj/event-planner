@@ -5,6 +5,7 @@ export const SelectMenu = ({ array, closeMenu, values, name }) => {
     values[name] = e.target.textContent;
     closeMenu(false);
   };
+
   return (
     <MenuList>
       {array.map(item => (
