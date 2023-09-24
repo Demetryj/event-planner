@@ -6,8 +6,6 @@ import { InputForm } from 'components/ElementsForm/InputForm';
 import { TextAreaForm } from 'components/ElementsForm/TextAreaForm';
 import { SelectForm } from 'components/ElementsForm/SelectForm';
 import { useMedia } from 'hooks/useMedia';
-import { clearCastomInputs } from 'utils/clearCastomInputs';
-import { clearInputs } from 'utils/clearInputs';
 import { FormWrap, Button } from './EventForm.styled';
 
 export const EditForm = ({
@@ -17,20 +15,12 @@ export const EditForm = ({
   onButtonClick,
 }) => {
   const { isDesktop } = useMedia();
-  const isFirstRender = useRef(true);
 
   const { t } = useTranslation();
 
-  useEffect(() => {
-    if (isFirstRender) {
-      return;
-    }
-    clearInputs();
-  }, []);
-
   const handleSubmit = (values, actions) => {
     onButtonClick(values);
-    clearCastomInputs(['category', 'priority'], values);
+
     actions.resetForm();
   };
 
@@ -64,10 +54,9 @@ export const EditForm = ({
                       values={values}
                     />
 
-                    <InputForm
+                    <SelectForm
                       title={t('eventForm.date')}
                       name="date"
-                      errors={errors}
                       values={values}
                     />
 
@@ -130,10 +119,9 @@ export const EditForm = ({
                   </Box>
 
                   <Box width="100%" mr={42}>
-                    <InputForm
+                    <SelectForm
                       title={t('eventForm.date')}
                       name="date"
-                      errors={errors}
                       values={values}
                     />
 
