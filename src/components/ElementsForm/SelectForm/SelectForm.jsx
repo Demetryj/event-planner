@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SelectMenu } from 'components/SelectMenu';
+import { DatePicker } from 'components/DatePicker';
 import { getValueForSelectInput } from 'utils/getValueForSelectInput';
 import { useClickOutside } from 'hooks/useClickOutside';
 import {
@@ -12,7 +13,8 @@ import {
 } from './SelectForm.styled';
 
 export const SelectForm = ({ title, name, values }) => {
-  const [isOpen, setIsopen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
   const menuRef = useRef(null);
 
   const { t } = useTranslation();
@@ -20,14 +22,14 @@ export const SelectForm = ({ title, name, values }) => {
   const priorityList = t('priorityList', { returnObjects: true });
 
   useClickOutside(menuRef, () => {
-    setIsopen(false);
+    setIsOpen(false);
   });
 
   const handleClickArrow = () => {
     if (name === 'picture') {
       return;
     }
-    setIsopen(!isOpen);
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -51,13 +53,18 @@ export const SelectForm = ({ title, name, values }) => {
       ) : (
         <ArrowUp onClick={handleClickArrow} />
       )}
-      {isOpen && (
+
+      {isOpen && (name === 'category' || name === 'priority') && (
         <SelectMenu
           array={name === 'category' ? categoryList : priorityList}
-          closeMenu={setIsopen}
+          closeMenu={setIsOpen}
           values={values}
           name={name}
         />
+      )}
+
+      {isOpen && name === 'date' && (
+        <DatePicker closeDatePicker={setIsOpen} values={values} name={name} />
       )}
     </WrapperInput>
   );
