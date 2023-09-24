@@ -51,7 +51,6 @@ export const DatePicker = ({ closeDatePicker, values, name }) => {
   };
 
   const handleDayClick = date => {
-    console.log(date);
     setSelectedDate(date);
   };
 
