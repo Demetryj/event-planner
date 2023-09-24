@@ -11,7 +11,6 @@ const Event = () => {
   const { id } = useParams();
   const events = useSelector(selectEvents);
   const location = useLocation();
-
   const eventData = getEventById(events, id);
 
   return (
