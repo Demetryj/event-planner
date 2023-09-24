@@ -64,6 +64,20 @@
   "calendar": {
     "weekDays": ["Sun", "Mun", "Tue", "Wed", "Thu", "Fri", "Sat"],
     "cancelBtn": "Cancel",
-    "chooseDateBtn": "Choose date"
+    "chooseDateBtn": "Choose date",
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
   }
 }

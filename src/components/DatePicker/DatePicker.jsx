@@ -4,6 +4,7 @@ import moment from 'moment';
 import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import { getMonthDates, areEqual } from 'utils/calendar';
+import { useTranslateMonth } from 'hooks/useTranslateMonth';
 import {
   Wrapper,
   Header,
@@ -21,6 +22,7 @@ export const DatePicker = ({ closeDatePicker, values, name }) => {
   const [monthAndYear, setMonthAndYear] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
   const currentDate = new Date();
+  const { translatedMonth } = useTranslateMonth(monthAndYear);
 
   const { t } = useTranslation();
   const weekDays = t('calendar.weekDays', { returnObjects: true });
@@ -65,8 +67,7 @@ export const DatePicker = ({ closeDatePicker, values, name }) => {
       <Header>
         <ArrowLeft onClick={handlePrevMonthButtonClick} />
         <MonthYear>
-          {`${moment(monthAndYear).format('MMMM')} 
-        ${moment(monthAndYear).format('YYYY')}`}
+          {`${translatedMonth} ${moment(monthAndYear).format('YYYY')}`}
         </MonthYear>
         <ArrowRight onClick={handleNextMonthButtonClick} />
       </Header>
