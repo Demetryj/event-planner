@@ -59,5 +59,11 @@
     "time": "Select time",
     "category": "Select category",
     "priority": "Select priority"
+  },
+
+  "calendar": {
+    "weekDays": ["Sun", "Mun", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    "cancelBtn": "Cancel",
+    "chooseDateBtn": "Choose date"
   }
 }
