@@ -19,10 +19,13 @@ const EditEvent = () => {
 
   const { t } = useTranslation();
 
-  const initialValues = { ...event, picture: '' };
+  const initialValues = {
+    ...event,
+    picture: '',
+  };
 
   const changeEvent = values => {
-    const changedEvent = { ...values, picture: event.picture, id: event.id };
+    const changedEvent = { id: event.id, ...values, picture: event.picture };
 
     dispatch(updateEvent(changedEvent));
     navigate(`/event/${id}`);
