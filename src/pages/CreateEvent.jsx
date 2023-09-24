@@ -7,27 +7,32 @@ import { MainTitle } from 'components/MainTitle';
 import { EditForm } from 'components/EventForm';
 import { addEvent } from 'redux/events/eventsSlice';
 import { editSchema } from 'data/editSchema';
+import { clearCastomInputs } from 'utils/clearCastomInputs';
 import imgDefault from 'images/default-H@2x.jpg';
 
-const initialValues = {
-  title: '',
-  description: '',
-  date: '',
-  time: '',
-  location: '',
-  category: '',
-  picture: '',
-  priority: '',
-};
-
 const CreateEvent = () => {
+  const initialValues = {
+    title: '',
+    description: '',
+    date: '',
+    time: '',
+    location: '',
+    category: '',
+    picture: '',
+    priority: '',
+  };
   const dispatch = useDispatch();
   const location = useLocation();
   const { t } = useTranslation();
 
   const createNewEvent = values => {
-    const newEvent = { ...values, picture: imgDefault, id: nanoid() };
+    const newEvent = {
+      id: nanoid(),
+      ...values,
+      picture: imgDefault,
+    };
     dispatch(addEvent(newEvent));
+    clearCastomInputs(['category', 'priority', 'date', 'time'], values);
   };
 
   return (
