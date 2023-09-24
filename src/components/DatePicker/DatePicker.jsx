@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import moment from 'moment';
+import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
 import { getMonthDates, areEqual } from 'utils/calendar';
 import {
@@ -16,12 +17,13 @@ import {
   ButtonChooseDate,
 } from './DatePicker.styled';
 
-const weekDays = ['Sun', 'Mun', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-
 export const DatePicker = ({ closeDatePicker, values, name }) => {
   const [monthAndYear, setMonthAndYear] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
   const currentDate = new Date();
+
+  const { t } = useTranslation();
+  const weekDays = t('calendar.weekDays', { returnObjects: true });
 
   const monthDates = getMonthDates(
     monthAndYear.getFullYear(),
@@ -47,6 +49,7 @@ export const DatePicker = ({ closeDatePicker, values, name }) => {
   };
 
   const handleDayClick = date => {
+    console.log(date);
     setSelectedDate(date);
   };
 
@@ -55,7 +58,6 @@ export const DatePicker = ({ closeDatePicker, values, name }) => {
   const handleButtonChooseDateClick = () => {
     values[name] = moment(selectedDate).format('DD/MM/YYYY');
     closeDatePicker(false);
-    console.log(values[name]);
   };
 
   return (
@@ -105,10 +107,10 @@ export const DatePicker = ({ closeDatePicker, values, name }) => {
 
       <Box display={{ md: 'flex' }} justifyContent={{ md: 'flex-end' }}>
         <ButtonCancel type="button" onClick={handleButtonCancelClick}>
-          Cancel
+          {t('calendar.cancelBtn')}
         </ButtonCancel>
         <ButtonChooseDate type="button" onClick={handleButtonChooseDateClick}>
-          Choose date
+          {t('calendar.chooseDateBtn')}
         </ButtonChooseDate>
       </Box>
     </Wrapper>
