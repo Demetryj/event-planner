@@ -65,9 +65,9 @@ export const Priority = styled.span`
   line-height: ${p => p.theme.lineHeights.m};
 
   color: ${p => {
-    if (p.variant === 'High') {
+    if (p.variant === 'High' || p.variant === 'Високий') {
       return p.theme.colors.categoryHight;
-    } else if (p.variant === 'Medium') {
+    } else if (p.variant === 'Medium' || p.variant === 'Середній') {
       return p.theme.colors.categoryMedium;
     } else {
       return p.theme.colors.categoryLow;
