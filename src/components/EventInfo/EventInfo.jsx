@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { deleteEvent } from 'redux/events/eventsSlice';
+import { getCorrectDate } from 'utils/getCorrectDate';
 import imgDefault from 'images/default-W@2x.jpg';
 import {
   Wrapper,
@@ -50,7 +51,7 @@ export const EventInfo = ({ location, data }) => {
           <Info>{category}</Info>
           <Priority variant={priority}>{priority}</Priority>
           <Info>{place}</Info>
-          <Info>{`${date} at ${time}`}</Info>
+          <Info>{`${getCorrectDate(date)} at ${time}`}</Info>
         </WrapperCont>
 
         <WrapperButton>

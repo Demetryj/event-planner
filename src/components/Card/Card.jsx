@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useClickOutside } from 'hooks/useClickOutside';
+import { getCorrectDate } from 'utils/getCorrectDate';
 import {
   WrapperCard,
   WrapperEvent,
@@ -52,7 +53,7 @@ export const Card = ({
 
       <div>
         <DateAndPlace>
-          <Text>{`${date} at ${time}`}</Text>
+          <Text>{`${getCorrectDate(date)} at ${time}`}</Text>
           <Text>{place}</Text>
         </DateAndPlace>
 
