@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import { Formik } from 'formik';
 import { useTranslation } from 'react-i18next';
 import { Box } from 'components/Box';
