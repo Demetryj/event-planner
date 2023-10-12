@@ -51,7 +51,8 @@
     "priority": "Priority",
     "buttonSave": "Save",
     "buttonAdd": "Add event",
-    "errorMessage": "Invalid input"
+    "errorMessageInvalid": "Invalid input",
+    "errorMessageRequired": "Required field"
   },
 
   "selectFormPlaceholder": {

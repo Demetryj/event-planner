@@ -51,7 +51,8 @@
     "priority": "Пріоритет",
     "buttonSave": "Зберегти",
     "buttonAdd": "Додати подію",
-    "errorMessage": "Неправильний формат"
+    "errorMessageInvalid": "Неправильний формат",
+    "errorMessageRequired": "Обов'язкове поле"
   },
 
   "selectFormPlaceholder": {
