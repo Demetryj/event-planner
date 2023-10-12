@@ -23,6 +23,11 @@ export const LangItem = styled.li`
   border-color: ${p => p.theme.colors.borderMenu};
 
   cursor: pointer;
+
+  &:hover p,
+  &:focus p {
+    color: ${p => p.theme.colors.purpleText};
+  }
 `;
 
 export const Text = styled.p`
@@ -30,4 +35,6 @@ export const Text = styled.p`
   font-weight: ${p => p.theme.fontWeights.medium};
   line-height: ${p => p.theme.lineHeights.sm};
   color: ${p => p.theme.colors.menu};
+
+  transition: color 250ms;
 `;
