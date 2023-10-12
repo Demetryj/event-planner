@@ -56,6 +56,7 @@ export const EditForm = ({
                     <SelectForm
                       title={t('eventForm.date')}
                       name="date"
+                      errors={errors}
                       values={values}
                     />
 
@@ -77,16 +78,19 @@ export const EditForm = ({
                     <SelectForm
                       title={t('eventForm.category')}
                       name="category"
+                      errors={errors}
                       values={values}
                     />
                     <SelectForm
                       title={t('eventForm.addPicture')}
                       name="picture"
+                      errors
                       values={values}
                     />
                     <SelectForm
                       title={t('eventForm.priority')}
                       name="priority"
+                      errors={errors}
                       values={values}
                     />
                   </Box>
@@ -121,6 +125,7 @@ export const EditForm = ({
                     <SelectForm
                       title={t('eventForm.date')}
                       name="date"
+                      errors={errors}
                       values={values}
                     />
 
@@ -143,17 +148,20 @@ export const EditForm = ({
                     <SelectForm
                       title={t('eventForm.category')}
                       name="category"
+                      errors={errors}
                       values={values}
                     />
                     <SelectForm
                       title={t('eventForm.addPicture')}
                       name="picture"
+                      errors
                       values={values}
                       disabled
                     />
                     <SelectForm
                       title={t('eventForm.priority')}
                       name="priority"
+                      errors={errors}
                       values={values}
                     />
                   </Box>

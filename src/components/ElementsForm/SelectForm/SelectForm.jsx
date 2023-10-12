@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SelectMenu } from 'components/SelectMenu';
 import { DatePicker } from 'components/DatePicker';
+import { InputError } from '../InputError';
 import { getValueForSelectInput } from 'utils/getValueForSelectInput';
 import { useClickOutside } from 'hooks/useClickOutside';
 import {
@@ -12,7 +13,7 @@ import {
   ArrowUp,
 } from './SelectForm.styled';
 
-export const SelectForm = ({ title, name, values }) => {
+export const SelectForm = ({ title, name, values, errors }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuRef = useRef(null);
@@ -66,6 +67,8 @@ export const SelectForm = ({ title, name, values }) => {
       {isOpen && name === 'date' && (
         <DatePicker closeDatePicker={setIsOpen} values={values} name={name} />
       )}
+
+      {errors[name] && <InputError name={name} />}
     </WrapperInput>
   );
 };
