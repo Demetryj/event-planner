@@ -73,8 +73,6 @@ export const RemoveIcon = styled(IoMdClose)`
   color: ${p => {
     if (p.disabled) {
       return p.theme.colors.iconDisabled;
-    } else if (p.err) {
-      return p.theme.colors.iconInputFail;
     } else {
       return p.theme.colors.iconInput;
     }
