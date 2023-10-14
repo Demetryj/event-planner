@@ -23,10 +23,10 @@ export const TextAreaForm = props => {
         name={name}
         err={errors[name]}
         as={CastomTextArea}
+        placeholder=" "
       />
       <RemoveIcon
         disabled={values[name] === ''}
-        err={errors[name]}
         onClick={() => {
           values[name] = '';
           document.getElementById(name).value = '';
