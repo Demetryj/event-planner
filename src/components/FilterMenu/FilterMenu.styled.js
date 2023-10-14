@@ -14,8 +14,17 @@ export const WrapperMenu = styled.div`
   box-shadow: ${p => p.theme.shadows.menu};
 
   @media screen and (${p => p.theme.media.medium}) {
-    right: ${p =>
-      p.variant === 'sortBy' ? p.theme.spacing(54) : p.theme.spacing(92)};
+    right: ${p => {
+      if (p.currentLang === 'en') {
+        return p.variant === 'sortBy'
+          ? p.theme.spacing(54)
+          : p.theme.spacing(92);
+      } else {
+        return p.variant === 'sortBy'
+          ? p.theme.spacing(58.5)
+          : p.theme.spacing(107);
+      }
+    }};
   }
 `;
 

@@ -43,9 +43,15 @@ export const Input = styled(Field)`
 
   border: ${p => p.theme.borders.normal};
   border-radius: ${p => p.theme.radii.s};
-  border-color: ${p => p.theme.colors.borderPurple};
+  border-color: ${p => {
+    if (p.err) {
+      return p.theme.colors.borderInputFail;
+    } else {
+      return p.theme.colors.borderPurple;
+    }
+  }};
 
-  cursor: ${p => (p.name === 'picture' ? 'arrow' : 'pointer')};
+  cursor: ${p => (p.name === 'picture' ? 'auto' : 'pointer')};
 
   &:placeholder-shown {
     border-color: ${p => !p.err && p.theme.colors.borderInput};
@@ -60,10 +66,6 @@ export const Input = styled(Field)`
 
     color: ${p =>
       p.isopen ? p.theme.colors.purpleText : p.theme.colors.inputPlaceholder};
-  }
-
-  &:placeholder-shown {
-    border-color: ${p => p.theme.colors.borderInput};
   }
 `;
 

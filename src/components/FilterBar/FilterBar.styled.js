@@ -3,14 +3,19 @@ import styled from 'styled-components';
 export const WrapperBar = styled.div`
   position: relative;
   display: flex;
-  align-items: 'center';
   justify-content: flex-end;
   gap: ${p => p.theme.spacing(6)};
 
   margin-bottom: ${p => p.theme.spacing(10)};
 
   @media screen and (${p => p.theme.media.medium}) {
-    gap: ${p => (p.isOpenSort ? p.theme.spacing(48.5) : p.theme.spacing(6))};
+    gap: ${p => {
+      if (p.currentLang === 'en') {
+        return p.isOpenSort ? p.theme.spacing(48.5) : p.theme.spacing(6);
+      } else {
+        return p.isOpenSort ? p.theme.spacing(59) : p.theme.spacing(6);
+      }
+    }};
   }
 
   @media screen and (${p => p.theme.media.large}) {
