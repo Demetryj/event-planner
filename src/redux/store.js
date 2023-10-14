@@ -19,11 +19,16 @@ const eventPersistConfig = {
   storage,
 };
 
+const pagePersistConfig = {
+  key: 'page',
+  storage,
+};
+
 export const store = configureStore({
   reducer: {
     events: persistReducer(eventPersistConfig, eventsReducer),
     filter: filterReducer,
-    page: paginationReducer,
+    page: persistReducer(pagePersistConfig, paginationReducer),
   },
 
   middleware: getDefaultMiddleware => [
