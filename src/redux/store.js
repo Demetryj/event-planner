@@ -12,6 +12,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 import { eventsReducer } from './events/eventsSlice';
 import { filterReducer } from './filter/filterSlice';
+import { paginationReducer } from './pagination/pagination';
 
 const eventPersistConfig = {
   key: 'events',
@@ -22,6 +23,7 @@ export const store = configureStore({
   reducer: {
     events: persistReducer(eventPersistConfig, eventsReducer),
     filter: filterReducer,
+    page: paginationReducer,
   },
 
   middleware: getDefaultMiddleware => [
