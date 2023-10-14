@@ -9,7 +9,7 @@ import { CardList } from 'components/CardList/CardList';
 import { PaginationCount } from 'components/PaginationCount';
 import { countPagination } from 'utils/countPagination';
 
-const per_page = 6;
+const per_page = 8;
 
 const Home = () => {
   const events = useSelector(selectVisibleEvents);
