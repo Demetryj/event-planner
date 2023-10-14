@@ -43,7 +43,8 @@ export const SelectForm = ({ title, name, values, errors }) => {
         id={name}
         type="text"
         name={name}
-        placeholder={isOpen ? getValueForSelectInput(name) : ''}
+        placeholder={isOpen ? getValueForSelectInput(name) : ' '}
+        err={errors[name]}
         readOnly
         isopen={isOpen ? 1 : 0}
         onClick={handleClickArrow}
