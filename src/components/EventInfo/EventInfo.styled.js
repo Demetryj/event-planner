@@ -90,7 +90,24 @@ export const WrapperButton = styled.div`
 `;
 
 export const BtnEdit = styled.button`
-  padding: ${p => p.theme.spacing(2)} ${p => p.theme.spacing(10.6)};
+  padding-top: ${p => p.theme.spacing(2)};
+  padding-bottom: ${p => p.theme.spacing(2)};
+
+  padding-left: ${p => {
+    if (p.currentLang === 'en') {
+      return p.theme.spacing(10.6);
+    } else {
+      return p.theme.spacing(4);
+    }
+  }};
+
+  padding-right: ${p => {
+    if (p.currentLang === 'en') {
+      return p.theme.spacing(10.6);
+    } else {
+      return p.theme.spacing(4);
+    }
+  }};
 
   font-family: inherit;
   font-size: ${p => p.theme.fontSizes.xs};
@@ -110,6 +127,10 @@ export const BtnEdit = styled.button`
   &:hover,
   &:focus {
     box-shadow: ${p => p.theme.shadows.main};
+  }
+
+  @media screen and (${p => p.theme.media.medium}) {
+    padding: ${p => p.theme.spacing(2)} ${p => p.theme.spacing(4)};
   }
 `;
 
