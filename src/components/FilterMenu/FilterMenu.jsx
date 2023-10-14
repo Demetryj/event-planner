@@ -20,6 +20,7 @@ export const FilterMenu = ({
   onClick,
   onChooseCategory,
   chooseSortBy,
+  currentLang,
 }) => {
   const refMenu = createRef(null);
 
@@ -28,7 +29,7 @@ export const FilterMenu = ({
   });
 
   return (
-    <WrapperMenu variant={variant} ref={refMenu}>
+    <WrapperMenu variant={variant} ref={refMenu} currentLang={currentLang}>
       <WrapperHead variant={variant} onClick={onClick}>
         {children}
       </WrapperHead>

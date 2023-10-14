@@ -24,6 +24,8 @@ export const FilterBar = ({ resetPagination }) => {
   const categoryList = t('categoryList', { returnObjects: true });
   const sortByList = t('sortByList', { returnObjects: true });
 
+  const currentLang = localStorage.getItem('i18nextLng');
+
   const handleClickSort = () => {
     setIsOpenCategory(false);
     setIsOpenSort(!isOpenSort);
@@ -49,7 +51,7 @@ export const FilterBar = ({ resetPagination }) => {
   };
 
   return (
-    <WrapperBar isOpenSort={isOpenSort}>
+    <WrapperBar isOpenSort={isOpenSort} currentLang={currentLang}>
       {!isOpenCategory ? (
         <Sort onClick={handleClickCategory}>
           {selectedСategory ? (
@@ -64,6 +66,7 @@ export const FilterBar = ({ resetPagination }) => {
           array={categoryList}
           onClick={handleClickCategory}
           onChooseCategory={handleChooseCategory}
+          currentLang={currentLang}
         >
           {selectedСategory ? (
             <p>{selectedСategory}</p>
@@ -85,6 +88,7 @@ export const FilterBar = ({ resetPagination }) => {
           variant="sortBy"
           onClick={handleClickSort}
           chooseSortBy={handleChooseSortBy}
+          currentLang={currentLang}
         >
           {isMobile && <LiaSlidersHSolid />}
           <p>{t('filterBar.sortBy')}</p>
