@@ -59,6 +59,7 @@ export const theme = {
     mobile: '(min-width: 320px)',
     medium: '(min-width: 768px)',
     large: '(min-width: 1280px)',
+    big: '(min-width: 1440px)',
   },
   /* usage
    @media screen and (${(p) => p.theme.media.large}) {
