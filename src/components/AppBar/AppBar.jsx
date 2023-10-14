@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { changePage } from 'redux/pagination/pagination';
 import { selectSearch } from 'redux/filter/selectors';
 import {
   changeFilter,
@@ -34,6 +35,7 @@ export const AppBar = () => {
     dispatch(chooseCategory(''));
     dispatch(sortByValue(''));
     dispatch(changeFilter(''));
+    dispatch(changePage(1));
   };
 
   return (
