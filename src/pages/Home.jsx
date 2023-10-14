@@ -19,7 +19,9 @@ const Home = () => {
   const total = events.length;
   const dispatch = useDispatch();
   const page = useSelector(selectPage);
-  const [visibleEvents, setVisibleEvents] = useState(events);
+  const [visibleEvents, setVisibleEvents] = useState(() =>
+    getVisibleEvents(page, events)
+  );
 
   const { t } = useTranslation();
 
