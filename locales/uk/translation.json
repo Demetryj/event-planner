@@ -64,7 +64,7 @@
 
   "calendar": {
     "weekDays": ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
-    "cancelBtn": "Завершити",
+    "cancelBtn": "Закрити",
     "chooseDateBtn": "Обрати дату",
     "months": [
       "Січень",
