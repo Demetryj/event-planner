@@ -22,6 +22,7 @@ export const EventInfo = ({ location, data }) => {
   const navigate = useNavigate();
 
   const { t } = useTranslation();
+  const currentLang = localStorage.getItem('i18nextLng');
 
   const {
     id,
@@ -56,7 +57,9 @@ export const EventInfo = ({ location, data }) => {
 
         <WrapperButton>
           <Link to={`/edit-event/${id}`} state={{ from: location }}>
-            <BtnEdit type="button">{t('event.editBtn')}</BtnEdit>
+            <BtnEdit type="button" currentLang={currentLang}>
+              {t('event.editBtn')}
+            </BtnEdit>
           </Link>
 
           <BtnDelete type="button" onClick={handleDeleteEvent}>
