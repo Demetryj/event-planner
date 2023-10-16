@@ -1,4 +1,8 @@
 export const getCorrectDate = value => {
+  if (!value) {
+    return '';
+  }
+
   const parts = value.split('/');
 
   const day = parts[0];
