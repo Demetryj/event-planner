@@ -9,7 +9,7 @@ export const InputForm = props => {
       <Label htmlFor={name}>{title}</Label>
       <Input
         id={name}
-        type="text"
+        type={name === 'time' ? 'time' : 'text'}
         name={name}
         err={errors[name]}
         placeholder=" "
