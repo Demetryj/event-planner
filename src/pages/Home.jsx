@@ -26,8 +26,14 @@ const Home = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
+    if (events.length <= per_page) {
+      setVisibleEvents(getVisibleEvents(1, events));
+      dispatch(changePage(1));
+      return;
+    }
+
     setVisibleEvents(getVisibleEvents(page, events));
-  }, [events, page]);
+  }, [dispatch, events, page]);
 
   const handleChange = (event, value) => {
     if (value === page) {

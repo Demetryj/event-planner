@@ -9,7 +9,7 @@ import sport from 'images/sportS@2x.jpg';
 
 export const events = [
   {
-    id: '0',
+    id: '1',
     title: 'Galery Opening',
     description:
       'Discover an enchanting evening celebrating the world of art at our exclusive gallery opening.',
@@ -21,7 +21,7 @@ export const events = [
     picture: art,
   },
   {
-    id: '1',
+    id: '2',
     title: 'Innovation Summit',
     description:
       'Engage in a thought-provoking journey of knowledge and collaboration at our Innovation Summit.',
@@ -33,7 +33,7 @@ export const events = [
     picture: conference,
   },
   {
-    id: '2',
+    id: '3',
     title: 'Empower Your Creativity',
     description:
       'Ignite your creativity and nurture your storytelling skills in our immersive Creative Writing Workshop.',
@@ -45,7 +45,7 @@ export const events = [
     picture: workshop1,
   },
   {
-    id: '3',
+    id: '4',
     title: 'Summer Soiree',
     description:
       'Embrace the tropical vibes and escape to paradise at our Beach Luau Extravaganza.',
@@ -57,7 +57,7 @@ export const events = [
     picture: party,
   },
   {
-    id: '4',
+    id: '5',
     title: 'Leadership Conference',
     description:
       'Unlock the secrets of effective leadership at our transformative Success Leadership Conference.',
@@ -69,7 +69,7 @@ export const events = [
     picture: business,
   },
   {
-    id: '5',
+    id: '6',
     title: 'Tech Startup Showcase',
     description:
       'Witness the future of technology as innovative startups showcase their groundbreaking ideas.',
@@ -81,7 +81,7 @@ export const events = [
     picture: workshop,
   },
   {
-    id: '6',
+    id: '7',
     title: 'Acoustic Garden Concert',
     description:
       'Experience the magic of live music amidst the serene beauty of nature at our Acoustic Garden Concert.',
@@ -93,7 +93,7 @@ export const events = [
     picture: music,
   },
   {
-    id: '7',
+    id: '8',
     title: 'Extreme Adventure Race',
     description:
       'Calling all thrill-seekers! Embark on an adrenaline-pumping journey at our Extreme Adventure Race.',

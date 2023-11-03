@@ -6,7 +6,7 @@ export const WrapperCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  height: 480px;
+  height: ${p => p.theme.spacing(120)};
 
   background-image: url(${p => p.picture});
 
